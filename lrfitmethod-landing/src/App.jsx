@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Hero, About, FAQ, Contact } from './sections';
+import { Hero, About, Results, Pricing, FAQ, Contact } from './sections';
 
 function App() {
   useEffect(() => {
@@ -27,6 +27,12 @@ function App() {
               <a href="#about" className="text-gray-300 hover:text-white transition-colors">
                 Sobre
               </a>
+              <a href="#results" className="text-gray-300 hover:text-white transition-colors">
+                Resultados
+              </a>
+              <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">
+                Preços
+              </a>
               <a href="#faq" className="text-gray-300 hover:text-white transition-colors">
                 FAQ
               </a>
@@ -50,6 +56,8 @@ function App() {
       <main className="pt-16">
         <Hero />
         <About />
+        <Results />
+        <Pricing />
         <FAQ />
         <Contact />
       </main>
@@ -69,6 +77,8 @@ function App() {
                 <h4 className="text-white font-semibold mb-4">Links</h4>
                 <ul className="space-y-2 text-sm">
                   <li><a href="#about" className="text-gray-400 hover:text-gold transition-colors">Sobre</a></li>
+                  <li><a href="#results" className="text-gray-400 hover:text-gold transition-colors">Resultados</a></li>
+                  <li><a href="#pricing" className="text-gray-400 hover:text-gold transition-colors">Preços</a></li>
                   <li><a href="#faq" className="text-gray-400 hover:text-gold transition-colors">FAQ</a></li>
                   <li><a href="#contato" className="text-gray-400 hover:text-gold transition-colors">Contato</a></li>
                 </ul>
