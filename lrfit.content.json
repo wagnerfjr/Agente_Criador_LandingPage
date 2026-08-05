@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-08-05",
+    "status": "PENDENTE",
+    "statusReason": "Waiting for trainer photos, WhatsApp numbers, pricing, and transformation photos from client"
+  },
+  "seo": {
+    "title": "LR Fit Method - Transformação Fitness com Treino Inteligente",
+    "description": "Método revolucionário de fitness que combina treinamento personalizado com análise de dados. Transforme seu corpo em 90 dias.",
+    "keywords": ["fitness", "treino", "metodologia", "personalizado", "transformação"],
+    "ogImage": "https://placeholder.com/1200x630/D4AF37/1a1a1a?text=LR+Fit+Method",
+    "ogUrl": "https://lrfitmethod.com"
+  },
+  "hero": {
+    "headline": "Transforme seu Corpo com o Método LR Fit",
+    "subheadline": "Metodologia revolucionária de treinamento personalizado",
+    "cta": "Comece sua transformação",
+    "ctaUrl": "#contato",
+    "backgroundImage": "PENDENTE_HERO_IMAGE",
+    "backgroundImageNote": "Aguardando foto do hero trainer do cliente"
+  },
+  "about": {
+    "title": "Por que LR Fit Method?",
+    "description": "Uma metodologia baseada em ciência, desenvolvida por especialistas em fitness e nutrição.",
+    "features": [
+      {
+        "icon": "target",
+        "title": "Treinamento Personalizado",
+        "description": "Cada sessão é adaptada ao seu corpo e objetivos"
+      },
+      {
+        "icon": "chart",
+        "title": "Análise de Dados",
+        "description": "Acompanhamento em tempo real do seu progresso"
+      },
+      {
+        "icon": "zap",
+        "title": "Resultados Comprovados",
+        "description": "Transformação garantida em 90 dias"
+      }
+    ]
+  },
+  "trainer": {
+    "name": "PENDENTE_TRAINER_NAME",
+    "title": "Especialista em Fitness e Nutrição",
+    "bio": "PENDENTE_TRAINER_BIO",
+    "image": "PENDENTE_TRAINER_IMAGE",
+    "imageNote": "Aguardando foto do trainer do cliente",
+    "whatsapp": "PENDENTE_WHATSAPP",
+    "whatsappNote": "Aguardando número de WhatsApp do trainer",
+    "credentials": [
+      "Certified Personal Trainer",
+      "Nutrition Specialist",
+      "Fitness Coach"
+    ]
+  },
+  "results": {
+    "title": "Resultados Reais de Nossos Clientes",
+    "subtitle": "Veja as transformações incríveis que nossos alunos alcançaram",
+    "cases": [
+      {
+        "id": "case-1",
+        "clientName": "PENDENTE_CLIENT_NAME_1",
+        "transformation": "PENDENTE_TRANSFORMATION_1",
+        "beforeImage": "PENDENTE_BEFORE_IMAGE_1",
+        "afterImage": "PENDENTE_AFTER_IMAGE_1",
+        "timeframe": "90 dias",
+        "testimonial": "PENDENTE_TESTIMONIAL_1"
+      },
+      {
+        "id": "case-2",
+        "clientName": "PENDENTE_CLIENT_NAME_2",
+        "transformation": "PENDENTE_TRANSFORMATION_2",
+        "beforeImage": "PENDENTE_BEFORE_IMAGE_2",
+        "afterImage": "PENDENTE_AFTER_IMAGE_2",
+        "timeframe": "90 dias",
+        "testimonial": "PENDENTE_TESTIMONIAL_2"
+      },
+      {
+        "id": "case-3",
+        "clientName": "PENDENTE_CLIENT_NAME_3",
+        "transformation": "PENDENTE_TRANSFORMATION_3",
+        "beforeImage": "PENDENTE_BEFORE_IMAGE_3",
+        "afterImage": "PENDENTE_AFTER_IMAGE_3",
+        "timeframe": "90 dias",
+        "testimonial": "PENDENTE_TESTIMONIAL_3"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Planos LR Fit Method",
+    "subtitle": "Escolha o plano perfeito para sua jornada",
+    "plans": [
+      {
+        "id": "starter",
+        "name": "PENDENTE_PLAN_NAME_1",
+        "price": "PENDENTE_PRICE_1",
+        "currency": "BRL",
+        "billingPeriod": "mês",
+        "description": "PENDENTE_PLAN_DESCRIPTION_1",
+        "features": ["PENDENTE_FEATURE_1", "PENDENTE_FEATURE_2", "PENDENTE_FEATURE_3"],
+        "cta": "Começar",
+        "ctaUrl": "#contato"
+      },
+      {
+        "id": "professional",
+        "name": "PENDENTE_PLAN_NAME_2",
+        "price": "PENDENTE_PRICE_2",
+        "currency": "BRL",
+        "billingPeriod": "mês",
+        "description": "PENDENTE_PLAN_DESCRIPTION_2",
+        "features": ["PENDENTE_FEATURE_1", "PENDENTE_FEATURE_2", "PENDENTE_FEATURE_3", "PENDENTE_FEATURE_4"],
+        "cta": "Começar",
+        "ctaUrl": "#contato",
+        "featured": true
+      },
+      {
+        "id": "premium",
+        "name": "PENDENTE_PLAN_NAME_3",
+        "price": "PENDENTE_PRICE_3",
+        "currency": "BRL",
+        "billingPeriod": "mês",
+        "description": "PENDENTE_PLAN_DESCRIPTION_3",
+        "features": ["PENDENTE_FEATURE_1", "PENDENTE_FEATURE_2", "PENDENTE_FEATURE_3", "PENDENTE_FEATURE_4", "PENDENTE_FEATURE_5"],
+        "cta": "Começar",
+        "ctaUrl": "#contato"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "items": [
+      {
+        "question": "Quanto tempo leva para ver resultados?",
+        "answer": "Os primeiros resultados aparecem em 2-3 semanas. Transformação completa em 90 dias."
+      },
+      {
+        "question": "Preciso ter experiência com treino?",
+        "answer": "Não! O método é adaptado para todos os níveis, do iniciante ao avançado."
+      },
+      {
+        "question": "Posso combinar com minha academia atual?",
+        "answer": "Sim! O LR Fit Method é complementar e funciona com qualquer tipo de treino."
+      },
+      {
+        "question": "Há garantia de satisfação?",
+        "answer": "Oferecemos garantia de 30 dias de reembolso total se não ficar satisfeito."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Comece sua Transformação Hoje",
+    "description": "Entre em contato para agendar sua avaliação gratuita",
+    "whatsapp": "PENDENTE_WHATSAPP",
+    "email": "PENDENTE_EMAIL",
+    "instagram": "PENDENTE_INSTAGRAM",
+    "cta": "Enviar mensagem via WhatsApp",
+    "ctaUrl": "PENDENTE_WHATSAPP_LINK"
+  },
+  "pixel": {
+    "metaPixelId": "1083428867680835",
+    "events": {
+      "viewContent": {
+        "enabled": true,
+        "trigger": "Page view"
+      },
+      "lead": {
+        "enabled": true,
+        "trigger": "Contact form submit"
+      },
+      "purchase": {
+        "enabled": true,
+        "trigger": "Checkout complete"
+      }
+    }
+  },
+  "deployment": {
+    "blockers": [
+      {
+        "id": "photos",
+        "status": "PENDENTE",
+        "description": "Trainer photos (hero, trainer card, results before/after)",
+        "impact": "Critical - blocks hero section and results section"
+      },
+      {
+        "id": "whatsapp",
+        "status": "PENDENTE",
+        "description": "Trainer WhatsApp number for contact CTA",
+        "impact": "Critical - blocks contact functionality"
+      },
+      {
+        "id": "pricing",
+        "status": "PENDENTE",
+        "description": "Plan names, prices, and feature descriptions",
+        "impact": "Critical - blocks pricing section"
+      },
+      {
+        "id": "results",
+        "status": "PENDENTE",
+        "description": "Client transformation data (names, testimonials, before/after images)",
+        "impact": "High - blocks results section"
+      }
+    ],
+    "message": "Landing page deployment is BLOCKED until all PENDENTE items are replaced with real content. Production environment will refuse deployment if any PENDENTE strings remain."
+  }
+}
