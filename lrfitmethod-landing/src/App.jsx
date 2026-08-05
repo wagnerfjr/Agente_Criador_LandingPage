@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 import { Hero, About, Results, Pricing, FAQ, Contact } from './sections';
+import { useScrollPerformance } from './hooks';
 
 function App() {
+  useScrollPerformance();
+
   useEffect(() => {
     // Track page views with Meta Pixel
     if (window.fbq) {
