@@ -1,33 +1,23 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git *)",
-      "Bash(npm *)",
-      "Bash(npx *)",
-      "Bash(cd *)",
-      "Bash(ls *)",
-      "Bash(pwd)",
-      "Bash(cat *)",
-      "Bash(echo *)",
-      "Bash(mkdir *)",
-      "Bash(rm *)",
-      "Bash(cp *)",
-      "Bash(mv *)",
-      "Bash(find *)",
-      "Bash(grep *)",
-      "Bash(curl *)",
-      "Bash(python *)",
-      "Bash(node *)",
       "Bash",
       "Edit",
       "Write",
       "Read",
       "Glob",
-      "Grep"
+      "Grep",
+      "Agent",
+      "Artifact"
     ],
-    "defaultMode": "bypassPermissions"
+    "defaultMode": "dontAsk"
   },
   "attribution": {
     "commit": "Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>"
+  },
+  "skipAutoPermissionPrompt": true,
+  "sandbox": {
+    "enabled": false
   }
 }
+

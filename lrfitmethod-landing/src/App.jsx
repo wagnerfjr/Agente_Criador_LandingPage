@@ -1,15 +1,24 @@
 import { useEffect } from 'react';
 import { Hero, About, Results, Pricing, FAQ, Contact } from './sections';
 import { useScrollPerformance } from './hooks';
+import { usePageLogger, useClickTracking } from './hooks/useLogger';
+import { logger } from './utils/logger';
 
 function App() {
   useScrollPerformance();
+  usePageLogger(); // Track page views
+  useClickTracking(); // Track all clicks
 
   useEffect(() => {
     // Track page views with Meta Pixel
     if (window.fbq) {
       window.fbq('track', 'PageView');
     }
+
+    logger.info('App initialized', {
+      url: window.location.href,
+      timestamp: new Date().toISOString(),
+    });
   }, []);
 
   return (
