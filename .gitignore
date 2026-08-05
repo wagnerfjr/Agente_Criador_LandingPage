@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Environment variables (NEVER commit!)
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.env.example
+
+# Testing
+coverage/
+.nyc_output/
+
+# OS
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+.cache/
+
+# Optional npm cache
+.npm
+
+# MCP local (will be in ~/.claude/mcp globally)
+.claude/mcp/  # Local MCP shouldn't be committed; use global ~/.claude/mcp
+
+# Asset pipeline intermediate
+assets/raw/
+
+# Vercel
+.vercel/
+
+# Local testing
+.lighthouse-results/
