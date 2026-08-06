@@ -1,0 +1,19 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm ci",
+  "framework": "react",
+  "outputDirectory": "dist",
+  "env": [
+    "VITE_API_URL",
+    "VITE_META_PIXEL_ID",
+    "VITE_GA_ID"
+  ],
+  "regions": ["sfo1"],
+  "functions": {
+    "lrfitmethod-landing/src/pages/api/**/*.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
+}
