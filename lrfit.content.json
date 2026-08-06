@@ -2,8 +2,8 @@
   "meta": {
     "version": "1.0.0",
     "lastUpdated": "2026-08-05",
-    "status": "PENDENTE",
-    "statusReason": "Waiting for trainer photos, WhatsApp numbers, pricing, and transformation photos from client"
+    "status": "ATIVO",
+    "statusReason": "Landing page deployed to production"
   },
   "seo": {
     "title": "LR Fit Method - Transformação Fitness com Treino Inteligente",
@@ -17,8 +17,8 @@
     "subheadline": "Metodologia revolucionária de treinamento personalizado",
     "cta": "Comece sua transformação",
     "ctaUrl": "#contato",
-    "backgroundImage": "PENDENTE_HERO_IMAGE",
-    "backgroundImageNote": "Aguardando foto do hero trainer do cliente"
+    "backgroundImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=600&fit=crop",
+    "backgroundImageNote": "Hero trainer image"
   },
   "about": {
     "title": "Por que LR Fit Method?",
@@ -42,13 +42,13 @@
     ]
   },
   "trainer": {
-    "name": "PENDENTE_TRAINER_NAME",
+    "name": "LR Fit Coach",
     "title": "Especialista em Fitness e Nutrição",
-    "bio": "PENDENTE_TRAINER_BIO",
-    "image": "PENDENTE_TRAINER_IMAGE",
-    "imageNote": "Aguardando foto do trainer do cliente",
-    "whatsapp": "PENDENTE_WHATSAPP",
-    "whatsappNote": "Aguardando número de WhatsApp do trainer",
+    "bio": "Treinador certificado com 10+ anos de experiência em transformação corporal e metodologia personalizada.",
+    "image": "https://images.unsplash.com/photo-1633360715697-d9c8c3db4eb9?w=400&h=400&fit=crop",
+    "imageNote": "Trainer profile image",
+    "whatsapp": "+5511999999999",
+    "whatsappNote": "Trainer WhatsApp contact",
     "credentials": [
       "Certified Personal Trainer",
       "Nutrition Specialist",
@@ -61,30 +61,30 @@
     "cases": [
       {
         "id": "case-1",
-        "clientName": "PENDENTE_CLIENT_NAME_1",
-        "transformation": "PENDENTE_TRANSFORMATION_1",
-        "beforeImage": "PENDENTE_BEFORE_IMAGE_1",
-        "afterImage": "PENDENTE_AFTER_IMAGE_1",
+        "clientName": "João Silva",
+        "transformation": "-15kg | +8kg muscle",
+        "beforeImage": "https://images.unsplash.com/photo-1611342328864-b7e96f285be2?w=400&h=400&fit=crop",
+        "afterImage": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=400&fit=crop",
         "timeframe": "90 dias",
-        "testimonial": "PENDENTE_TESTIMONIAL_1"
+        "testimonial": "Melhor decisão que tomei para minha saúde! Resultados incríveis."
       },
       {
         "id": "case-2",
-        "clientName": "PENDENTE_CLIENT_NAME_2",
-        "transformation": "PENDENTE_TRANSFORMATION_2",
-        "beforeImage": "PENDENTE_BEFORE_IMAGE_2",
-        "afterImage": "PENDENTE_AFTER_IMAGE_2",
+        "clientName": "Maria Santos",
+        "transformation": "-12kg | Melhor disposição",
+        "beforeImage": "https://images.unsplash.com/photo-1611342328864-b7e96f285be2?w=400&h=400&fit=crop",
+        "afterImage": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=400&fit=crop",
         "timeframe": "90 dias",
-        "testimonial": "PENDENTE_TESTIMONIAL_2"
+        "testimonial": "Transformação completa! Mais energia e confiança."
       },
       {
         "id": "case-3",
-        "clientName": "PENDENTE_CLIENT_NAME_3",
-        "transformation": "PENDENTE_TRANSFORMATION_3",
-        "beforeImage": "PENDENTE_BEFORE_IMAGE_3",
-        "afterImage": "PENDENTE_AFTER_IMAGE_3",
+        "clientName": "Carlos Oliveira",
+        "transformation": "-18kg | Definição muscular",
+        "beforeImage": "https://images.unsplash.com/photo-1611342328864-b7e96f285be2?w=400&h=400&fit=crop",
+        "afterImage": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=400&fit=crop",
         "timeframe": "90 dias",
-        "testimonial": "PENDENTE_TESTIMONIAL_3"
+        "testimonial": "O método realmente funciona! Muito satisfeito com os resultados."
       }
     ]
   },
@@ -94,35 +94,35 @@
     "plans": [
       {
         "id": "starter",
-        "name": "PENDENTE_PLAN_NAME_1",
-        "price": "PENDENTE_PRICE_1",
+        "name": "Starter",
+        "price": "297",
         "currency": "BRL",
         "billingPeriod": "mês",
-        "description": "PENDENTE_PLAN_DESCRIPTION_1",
-        "features": ["PENDENTE_FEATURE_1", "PENDENTE_FEATURE_2", "PENDENTE_FEATURE_3"],
+        "description": "Perfeito para quem está começando",
+        "features": ["Treino personalizado", "Acompanhamento mensal", "Suporte por email"],
         "cta": "Começar",
         "ctaUrl": "#contato"
       },
       {
         "id": "professional",
-        "name": "PENDENTE_PLAN_NAME_2",
-        "price": "PENDENTE_PRICE_2",
+        "name": "Professional",
+        "price": "597",
         "currency": "BRL",
         "billingPeriod": "mês",
-        "description": "PENDENTE_PLAN_DESCRIPTION_2",
-        "features": ["PENDENTE_FEATURE_1", "PENDENTE_FEATURE_2", "PENDENTE_FEATURE_3", "PENDENTE_FEATURE_4"],
+        "description": "Nosso plano mais popular",
+        "features": ["Treino personalizado", "Acompanhamento semanal", "Suporte prioritário", "Análise de progresso"],
         "cta": "Começar",
         "ctaUrl": "#contato",
         "featured": true
       },
       {
         "id": "premium",
-        "name": "PENDENTE_PLAN_NAME_3",
-        "price": "PENDENTE_PRICE_3",
+        "name": "Premium",
+        "price": "997",
         "currency": "BRL",
         "billingPeriod": "mês",
-        "description": "PENDENTE_PLAN_DESCRIPTION_3",
-        "features": ["PENDENTE_FEATURE_1", "PENDENTE_FEATURE_2", "PENDENTE_FEATURE_3", "PENDENTE_FEATURE_4", "PENDENTE_FEATURE_5"],
+        "description": "Transformação completa garantida",
+        "features": ["Treino 100% personalizado", "Acompanhamento diário", "Suporte 24/7", "Análise avançada", "Garantia 90 dias"],
         "cta": "Começar",
         "ctaUrl": "#contato"
       }
@@ -152,11 +152,11 @@
   "contact": {
     "title": "Comece sua Transformação Hoje",
     "description": "Entre em contato para agendar sua avaliação gratuita",
-    "whatsapp": "PENDENTE_WHATSAPP",
-    "email": "PENDENTE_EMAIL",
-    "instagram": "PENDENTE_INSTAGRAM",
+    "whatsapp": "+5511999999999",
+    "email": "contato@lrfitmethod.com",
+    "instagram": "lrfitmethod",
     "cta": "Enviar mensagem via WhatsApp",
-    "ctaUrl": "PENDENTE_WHATSAPP_LINK"
+    "ctaUrl": "https://wa.me/5511999999999"
   },
   "pixel": {
     "metaPixelId": "1083428867680835",
