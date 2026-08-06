@@ -1,0 +1,33 @@
+# Version control
+.git
+.gitignore
+.github/
+
+# Documentation
+README.md
+CONTRIBUTING.md
+DEPLOYMENT.md
+
+# Dependencies
+node_modules/
+
+# Development files
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.test-cache
+coverage/
+
+# Build artifacts (kept during build)
+# dist/ - NOT ignored, needed for deployment
+
+# Logs
+*.log
+npm-debug.log
