@@ -1,4 +1,5 @@
 import { Button } from '@/components';
+import LeadForm from '@/components/LeadForm';
 
 export default function Contact() {
   const handleWhatsApp = () => {
@@ -28,11 +29,20 @@ export default function Contact() {
             Entre em contato agora para agendar sua avaliação gratuita e começar sua jornada de transformação.
           </p>
 
-          {/* Main CTA */}
+          {/* Lead Form */}
+          <div className="mb-12 max-w-md mx-auto">
+            <LeadForm />
+          </div>
+
+          {/* Divider */}
+          <div className="my-12 border-t border-gray-700"></div>
+
+          {/* Alternative CTA */}
+          <p className="text-gray-400 mb-6">Ou entre em contato direto:</p>
           <div className="mb-12">
             <Button
-              variant="primary"
-              size="xl"
+              variant="outline"
+              size="lg"
               onClick={handleWhatsApp}
               className="w-full sm:w-auto"
             >
