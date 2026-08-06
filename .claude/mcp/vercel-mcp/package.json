@@ -1,0 +1,13 @@
+{
+  "name": "vercel-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Vercel API integration - LR Fit Method",
+  "main": "index.js",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

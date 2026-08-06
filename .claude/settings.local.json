@@ -1,0 +1,24 @@
+{
+  "mcp_servers": [
+    {
+      "name": "meta-business",
+      "type": "stdio",
+      "command": "node",
+      "args": [".claude/mcp/meta-business-mcp/index.js"],
+      "env": {
+        "META_ACCESS_TOKEN": "${env.META_ACCESS_TOKEN}",
+        "META_BUSINESS_ACCOUNT_ID": "${env.META_BUSINESS_ACCOUNT_ID}"
+      }
+    },
+    {
+      "name": "vercel",
+      "type": "stdio",
+      "command": "node",
+      "args": [".claude/mcp/vercel-mcp/index.js"],
+      "env": {
+        "VERCEL_TOKEN": "${env.TOKEN_VERCEL}",
+        "VERCEL_PROJECT_ID": "lrfitmethod-landing"
+      }
+    }
+  ]
+}
