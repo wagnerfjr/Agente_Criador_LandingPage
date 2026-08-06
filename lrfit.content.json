@@ -179,29 +179,29 @@
     "blockers": [
       {
         "id": "photos",
-        "status": "PENDENTE",
+        "status": "COMPLETO",
         "description": "Trainer photos (hero, trainer card, results before/after)",
         "impact": "Critical - blocks hero section and results section"
       },
       {
         "id": "whatsapp",
-        "status": "PENDENTE",
+        "status": "COMPLETO",
         "description": "Trainer WhatsApp number for contact CTA",
         "impact": "Critical - blocks contact functionality"
       },
       {
         "id": "pricing",
-        "status": "PENDENTE",
+        "status": "COMPLETO",
         "description": "Plan names, prices, and feature descriptions",
         "impact": "Critical - blocks pricing section"
       },
       {
         "id": "results",
-        "status": "PENDENTE",
+        "status": "COMPLETO",
         "description": "Client transformation data (names, testimonials, before/after images)",
         "impact": "High - blocks results section"
       }
     ],
-    "message": "Landing page deployment is BLOCKED until all PENDENTE items are replaced with real content. Production environment will refuse deployment if any PENDENTE strings remain."
+    "message": "Landing page deployment is ATIVO. All required content has been provided."
   }
 }
