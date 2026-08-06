@@ -90,7 +90,7 @@ textarea::placeholder {
 
 /* Utilities */
 .truncate {
-  @apply overflow-hidden text-overflow-ellipsis whitespace-nowrap;
+  @apply overflow-hidden text-ellipsis whitespace-nowrap;
 }
 
 /* Animations */
@@ -124,7 +124,7 @@ textarea::placeholder {
 
 /* Accessibility */
 .sr-only {
-  @apply absolute w-px h-px p-0 -m-px overflow-hidden clip bg-clip-padding border-0;
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden border-0;
 }
 
 .focus-visible {
