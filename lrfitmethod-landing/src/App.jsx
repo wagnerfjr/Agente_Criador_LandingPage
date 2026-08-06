@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Hero, About, Results, Pricing, FAQ, Contact } from './sections';
+import { Hero, About, Results, Pricing, Dashboard, Reports, FAQ, Contact } from './sections';
 import { useScrollPerformance } from './hooks';
 import { usePageLogger, useClickTracking } from './hooks/useLogger';
 import { logger } from './utils/logger';
@@ -45,6 +45,12 @@ function App() {
               <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">
                 Preços
               </a>
+              <a href="#dashboard" className="text-gray-300 hover:text-white transition-colors">
+                Dashboard
+              </a>
+              <a href="#reports" className="text-gray-300 hover:text-white transition-colors">
+                Relatórios
+              </a>
               <a href="#faq" className="text-gray-300 hover:text-white transition-colors">
                 FAQ
               </a>
@@ -70,6 +76,8 @@ function App() {
         <About />
         <Results />
         <Pricing />
+        <Dashboard />
+        <Reports />
         <FAQ />
         <Contact />
       </main>
@@ -91,6 +99,8 @@ function App() {
                   <li><a href="#about" className="text-gray-400 hover:text-gold transition-colors">Sobre</a></li>
                   <li><a href="#results" className="text-gray-400 hover:text-gold transition-colors">Resultados</a></li>
                   <li><a href="#pricing" className="text-gray-400 hover:text-gold transition-colors">Preços</a></li>
+                  <li><a href="#dashboard" className="text-gray-400 hover:text-gold transition-colors">Dashboard</a></li>
+                  <li><a href="#reports" className="text-gray-400 hover:text-gold transition-colors">Relatórios</a></li>
                   <li><a href="#faq" className="text-gray-400 hover:text-gold transition-colors">FAQ</a></li>
                   <li><a href="#contato" className="text-gray-400 hover:text-gold transition-colors">Contato</a></li>
                 </ul>
