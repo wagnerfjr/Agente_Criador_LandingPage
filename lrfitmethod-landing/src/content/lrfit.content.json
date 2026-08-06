@@ -37,6 +37,11 @@
     { "icon": "🎉", "title": "Viva com Liberdade", "description": "Aproveite os momentos da vida sem culpa ou restrições extremas." }
   ],
 
+  "quemSomos": {
+    "missao": "Nossa missão é transformar vidas através do movimento. Mais do que prescrever treinos, inspiramos um estilo de vida. Vivemos aquilo que ensinamos, porque acreditamos que a atividade física transforma a saúde física, mental e funcional. Com amor, dedicação e propósito, guiamos cada aluno na construção de uma vida mais forte, saudável e equilibrada, sem abrir mão da liberdade de viver, aproveitar cada momento e fazer o que ama. Porque acreditamos que o verdadeiro sucesso não está apenas em alcançar resultados, mas em conquistar uma vida plena, feliz e sustentável.",
+    "parceria": "A união da nossa experiência vai além da parceria. Ela fortalece nosso propósito de oferecer um atendimento personalizado, baseado em conhecimento, dedicação e resultados reais. Juntos, entregamos uma experiência ainda mais completa para transformar vidas através da atividade física."
+  },
+
   "trainers": {
     "renata": {
       "name": "Renata Alves",

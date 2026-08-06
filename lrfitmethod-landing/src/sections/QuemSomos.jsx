@@ -49,9 +49,17 @@ export default function QuemSomos({ trainer, trackLead }) {
   return (
     <section id="quem-somos" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-dark text-center mb-12 text-wrap-balance">
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-dark text-center mb-8 text-wrap-balance">
           Quem Somos
         </h2>
+
+        <div className="max-w-2xl mx-auto text-center mb-16">
+          <p className="text-lg md:text-xl text-dark font-heading italic leading-relaxed mb-6">
+            &ldquo;{content.quemSomos.missao}&rdquo;
+          </p>
+          <p className="text-gray-600 leading-relaxed">{content.quemSomos.parceria}</p>
+        </div>
+
         <Grid cols={2} gap="lg" className="max-w-3xl mx-auto">
           <TrainerCard
             id="renata"
