@@ -1,4 +1,10 @@
-# PROJECT.md — LR Fit Method Landing + Analytics
+# PROJECT.md (tracking de execução)
+
+> A visão/escopo canônico do produto está em [`docs/spec/PROJECT.md`](../../docs/spec/PROJECT.md).
+> Este arquivo é o estado de tracking ativo da skill tlc-spec-driven (métricas, riscos, fases) —
+> reconciliado em 2026-08-06 para não conflitar com a spec original.
+
+---
 
 **Project Name:** LR Fit Method - Landing Page + Analytics Dashboard  
 **Owner:** Wagner (Tech Lead + Marketer)  

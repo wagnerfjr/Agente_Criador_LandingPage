@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LR Fit Method — Curadoria de Fotos</title>
+<style>
+  :root {
+    --gold: #D4AF37;
+    --gold-deep: #A8842A;
+    --gold-soft: #E8D9A8;
+    --navy: #0A0E27;
+    --navy-soft: #141A3D;
+    --cream: #FAF7F0;
+    --line: #E4DFD1;
+    --ink: #1C1B17;
+    --ink-muted: #6B6558;
+    --ok: #3E7D4C;
+    --warn: #B8862E;
+    --danger: #B84A3E;
+    --radius: 10px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --cream: #0A0E27; --navy-soft: #141A3D; --line: #262C55;
+      --ink: #F3EFE4; --ink-muted: #A9A38F; --gold-soft: #4A4022;
+    }
+  }
+  :root[data-theme="dark"] {
+    --cream: #0A0E27; --navy-soft: #141A3D; --line: #262C55;
+    --ink: #F3EFE4; --ink-muted: #A9A38F; --gold-soft: #4A4022;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--cream); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  .topbar { background: var(--navy); color: var(--cream); padding: 28px 24px 26px; }
+  .topbar-inner { max-width: 1180px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+  .wordmark { display: flex; align-items: baseline; gap: 10px; }
+  .wordmark .mark { font-size: 28px; font-weight: 800; letter-spacing: 0.5px;
+    background: linear-gradient(135deg, var(--gold) 0%, #F3DE8C 50%, var(--gold) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .wordmark .sub { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-soft); opacity: 0.85; }
+  .stats { display: flex; gap: 22px; font-variant-numeric: tabular-nums; }
+  .stat { text-align: right; }
+  .stat .n { font-size: 22px; font-weight: 700; color: var(--gold); display: block; }
+  .stat .l { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cream); opacity: 0.65; }
+  .intro { max-width: 1180px; margin: 0 auto; padding: 26px 24px 6px; }
+  .intro h1 { font-size: 22px; margin: 0 0 8px; text-wrap: balance; }
+  .intro p { max-width: 68ch; color: var(--ink-muted); font-size: 15px; margin: 0 0 6px; }
+  .intro .callout { background: var(--navy-soft); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0;
+    padding: 14px 16px; margin-top: 16px; font-size: 14px; color: var(--ink); }
+  :root:not([data-theme="dark"]) .intro .callout { background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--gold); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .intro .callout { background: var(--navy-soft); border: none; border-left: 3px solid var(--gold); } }
+  :root[data-theme="dark"] .intro .callout { background: var(--navy-soft); border: none; border-left: 3px solid var(--gold); }
+  .toolbar { max-width: 1180px; margin: 18px auto 0; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .btn { font: inherit; font-size: 13px; font-weight: 600; border-radius: 8px; padding: 10px 16px;
+    border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+  .btn:hover { border-color: var(--gold-deep); }
+  .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .btn-primary { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+  .btn-primary:hover { background: var(--gold-deep); border-color: var(--gold-deep); }
+  .grid { max-width: 1180px; margin: 22px auto 40px; padding: 0 24px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .card { background: var(--navy-soft); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line);
+    display: flex; flex-direction: column; position: relative; }
+  :root:not([data-theme="dark"]) .card { background: #fff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .card { background: var(--navy-soft); } }
+  :root[data-theme="dark"] .card { background: var(--navy-soft); }
+  .card .status-edge { position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--line); }
+  .card[data-role="hero"] .status-edge, .card[data-role="solo-renata"] .status-edge,
+  .card[data-role="solo-leandro"] .status-edge, .card[data-role="transformacao"] .status-edge,
+  .card[data-role="video"] .status-edge { background: var(--ok); }
+  .card[data-role="nao-usar"] .status-edge { background: var(--danger); }
+  .thumb-wrap { aspect-ratio: 4 / 5; background: #000; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .thumb-wrap img, .thumb-wrap video { width: 100%; height: 100%; object-fit: cover; }
+  .card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .filename { font-size: 11px; color: var(--ink-muted); word-break: break-all; font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+  .field label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-muted); margin-bottom: 4px; }
+  select, textarea, input[type="text"] { width: 100%; font: inherit; font-size: 13.5px; padding: 8px 10px;
+    border-radius: 6px; border: 1px solid var(--line); background: var(--cream); color: var(--ink); }
+  :root:not([data-theme="dark"]) select, :root:not([data-theme="dark"]) textarea, :root:not([data-theme="dark"]) input[type="text"] { background: #fdfcf9; }
+  select:focus-visible, textarea:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+  textarea { resize: vertical; min-height: 52px; }
+  .suggestion-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600;
+    color: var(--gold-deep); background: var(--gold-soft); padding: 3px 8px; border-radius: 20px; width: fit-content; }
+  .flag-note { font-size: 12.5px; color: var(--warn); background: color-mix(in srgb, var(--warn) 12%, transparent);
+    border-radius: 6px; padding: 8px 10px; line-height: 1.4; }
+  .panel { max-width: 1180px; margin: 0 auto 40px; padding: 0 24px; }
+  .panel-box { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; background: var(--navy-soft); }
+  :root:not([data-theme="dark"]) .panel-box { background: #fff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .panel-box { background: var(--navy-soft); } }
+  :root[data-theme="dark"] .panel-box { background: var(--navy-soft); }
+  .panel-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-muted); margin: 0 0 10px; }
+  .panel textarea { width: 100%; min-height: 140px; font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 12.5px; padding: 14px; }
+  .copied-msg { font-size: 13px; color: var(--ok); font-weight: 600; opacity: 0; transition: opacity 0.2s; }
+  .copied-msg.show { opacity: 1; }
+  .import-msg { font-size: 13px; font-weight: 600; opacity: 0; transition: opacity 0.2s; }
+  .import-msg.show { opacity: 1; }
+  .import-msg.ok { color: var(--ok); }
+  .import-msg.err { color: var(--danger); }
+  footer.page-footer { text-align: center; padding: 30px 24px 50px; color: var(--ink-muted); font-size: 12.5px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="wordmark">
+      <span class="mark">LR FIT METHOD</span>
+      <span class="sub">Curadoria de Fotos</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="n" id="stat-total">0</span><span class="l">Itens</span></div>
+      <div class="stat"><span class="n" id="stat-done">0</span><span class="l">Classificados</span></div>
+      <div class="stat"><span class="n" id="stat-pending">0</span><span class="l">Pendentes</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="intro">
+  <h1>Para cada foto/vídeo, escolha o que ela representa</h1>
+  <p>Isso vai definir quais imagens entram na landing page (Hero, seção Quem Somos e Resultados). Preencha o campo de observação sempre que precisar dar contexto — nome do cliente, se pode divulgar, etc.</p>
+  <div class="callout">
+    Quando terminar, clique em <strong>"Copiar resumo"</strong> e cole a resposta de volta pro Wagner (ou mande esse arquivo .html pra Renata/Leandro revisarem — cada um pode classificar na própria cópia e mandar o texto copiado de volta).
+  </div>
+</div>
+
+<div class="toolbar">
+  <button class="btn" id="btn-reset">Limpar tudo</button>
+  <button class="btn btn-primary" id="btn-copy-top">Copiar resumo</button>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="panel">
+  <div class="panel-box">
+    <p class="panel-title">Resumo (atualiza automaticamente)</p>
+    <textarea id="summary-output" readonly spellcheck="false"></textarea>
+    <div class="toolbar" style="padding:0; margin-top:10px;">
+      <button class="btn btn-primary" id="btn-copy-bottom">Copiar resumo</button>
+      <span class="copied-msg" id="copied-msg">Copiado!</span>
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-box">
+    <p class="panel-title">Colar resumo recebido (ex: do Leandro/Renata)</p>
+    <textarea id="import-input" placeholder="Cole aqui o texto que a Renata/Leandro te mandaram de volta..." spellcheck="false"></textarea>
+    <div class="toolbar" style="padding:0; margin-top:10px;">
+      <button class="btn btn-primary" id="btn-import">Aplicar classificações coladas</button>
+      <span class="import-msg" id="import-msg"></span>
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer">LR Fit Method — ferramenta interna de curadoria. Gerada por scripts/generate-photo-review.js — rode de novo sempre que adicionar fotos.</footer>
+
+<script>
+  const ROLE_OPTIONS = [
+    { value: '', label: '— selecionar —' },
+    { value: 'hero', label: 'Hero — foto do casal (capa do site)' },
+    { value: 'solo-renata', label: 'Solo — Renata' },
+    { value: 'solo-leandro', label: 'Solo — Leandro' },
+    { value: 'transformacao', label: 'Antes/Depois — cliente' },
+    { value: 'video', label: 'Vídeo de referência' },
+    { value: 'nao-usar', label: 'Não usar / duplicada' },
+  ];
+
+  const DATA = __GALLERY_DATA__;
+  const STORAGE_KEY = 'lrfit-photo-review-v1';
+
+  function loadState() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+    catch (e) { return {}; }
+  }
+  function saveState(state) { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+
+  let state = loadState();
+  function getEntry(id) { return state[id] || { role: '', notes: '' }; }
+  function setEntry(id, patch) {
+    state[id] = { ...getEntry(id), ...patch };
+    saveState(state);
+    updateStats();
+    updateSummary();
+  }
+
+  const grid = document.getElementById('grid');
+
+  function renderCards() {
+    grid.innerHTML = '';
+    DATA.forEach((item) => {
+      if (!state[item.id] && item.suggestion) {
+        state[item.id] = { role: item.suggestion, notes: '' };
+      }
+      const entry = getEntry(item.id);
+
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.dataset.id = item.id;
+      card.dataset.role = entry.role || '';
+
+      const media = item.kind === 'video'
+        ? `<video src="${item.src}" controls muted playsinline></video>`
+        : `<img src="${item.src}" alt="${item.filename}" loading="lazy" />`;
+
+      const options = ROLE_OPTIONS.map(o =>
+        `<option value="${o.value}" ${o.value === entry.role ? 'selected' : ''}>${o.label}</option>`
+      ).join('');
+
+      const suggestionBadge = item.suggestion ? `<span class="suggestion-badge">⭐ sugestão</span>` : '';
+      const flag = item.note ? `<div class="flag-note">${item.note}</div>` : '';
+
+      card.innerHTML = `
+        <div class="status-edge"></div>
+        <div class="thumb-wrap">${media}</div>
+        <div class="card-body">
+          <div class="filename">${item.filename} · ${item.sizeKB}KB</div>
+          ${suggestionBadge}
+          ${flag}
+          <div class="field">
+            <label for="role-${item.id}">O que é essa foto?</label>
+            <select id="role-${item.id}">${options}</select>
+          </div>
+          <div class="field">
+            <label for="notes-${item.id}">Observações (nome do cliente, autorização, etc.)</label>
+            <textarea id="notes-${item.id}" placeholder="Ex: Carlos, perdeu 8kg em 12 semanas, pode usar o primeiro nome">${entry.notes || ''}</textarea>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+
+      card.querySelector(`#role-${item.id}`).addEventListener('change', (e) => {
+        setEntry(item.id, { role: e.target.value });
+        card.dataset.role = e.target.value;
+      });
+      card.querySelector(`#notes-${item.id}`).addEventListener('input', (e) => {
+        setEntry(item.id, { notes: e.target.value });
+      });
+    });
+  }
+
+  function updateStats() {
+    const total = DATA.length;
+    const done = DATA.filter(d => getEntry(d.id).role).length;
+    document.getElementById('stat-total').textContent = total;
+    document.getElementById('stat-done').textContent = done;
+    document.getElementById('stat-pending').textContent = total - done;
+  }
+
+  function roleLabel(v) { return (ROLE_OPTIONS.find(o => o.value === v) || {}).label || '(não classificada)'; }
+
+  function updateSummary() {
+    const lines = DATA.map((item) => {
+      const e = getEntry(item.id);
+      let line = `${item.filename}\n  id: ${item.id}\n  → ${roleLabel(e.role)}`;
+      if (e.notes) line += `\n  → Obs: ${e.notes}`;
+      return line;
+    });
+    document.getElementById('summary-output').value = lines.join('\n\n');
+  }
+
+  function copySummary() {
+    const text = document.getElementById('summary-output').value;
+    const msg = document.getElementById('copied-msg');
+    navigator.clipboard.writeText(text).then(showCopied).catch(() => {
+      const ta = document.getElementById('summary-output');
+      ta.select();
+      document.execCommand('copy');
+      showCopied();
+    });
+    function showCopied() {
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 1800);
+    }
+  }
+
+  // Importa um resumo colado (mesmo formato gerado acima), casando pelo "id:" da linha.
+  function importSummary() {
+    const raw = document.getElementById('import-input').value;
+    const msg = document.getElementById('import-msg');
+    const blocks = raw.split(/\n\s*\n/).map(b => b.trim()).filter(Boolean);
+    let applied = 0;
+    blocks.forEach((block) => {
+      const idMatch = block.match(/id:\s*(ph_[a-f0-9]+)/);
+      if (!idMatch) return;
+      const id = idMatch[1];
+      const roleLine = block.match(/→\s*(.+)/g) || [];
+      let role = '';
+      let notes = '';
+      roleLine.forEach((l) => {
+        const clean = l.replace('→', '').trim();
+        const match = ROLE_OPTIONS.find(o => o.label === clean);
+        if (match) role = match.value;
+        else if (clean.startsWith('Obs:')) notes = clean.replace('Obs:', '').trim();
+      });
+      if (DATA.find(d => d.id === id)) {
+        state[id] = { role, notes };
+        applied++;
+      }
+    });
+    saveState(state);
+    if (applied > 0) {
+      renderCards();
+      updateStats();
+      updateSummary();
+      msg.textContent = `${applied} classificação(ões) aplicada(s).`;
+      msg.className = 'import-msg show ok';
+    } else {
+      msg.textContent = 'Nenhum item reconhecido — confira se o texto colado é o formato gerado por esta página.';
+      msg.className = 'import-msg show err';
+    }
+    setTimeout(() => msg.classList.remove('show'), 4000);
+  }
+
+  document.getElementById('btn-copy-top').addEventListener('click', copySummary);
+  document.getElementById('btn-copy-bottom').addEventListener('click', copySummary);
+  document.getElementById('btn-import').addEventListener('click', importSummary);
+  document.getElementById('btn-reset').addEventListener('click', () => {
+    if (confirm('Limpar todas as classificações e observações?')) {
+      state = {};
+      saveState(state);
+      renderCards();
+      updateStats();
+      updateSummary();
+    }
+  });
+
+  renderCards();
+  updateStats();
+  updateSummary();
+</script>
+</body>
+</html>

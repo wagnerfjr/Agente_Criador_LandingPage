@@ -9,7 +9,7 @@
 ## Pre-Launch Confirmation
 
 ### ✅ Phase 1: SPECIFY (Requirements)
-- [x] SDD (Software Design Document) complete — `Documentos/SDD-LR-FIT-COMPLETE.md`
+- [x] SDD (Software Design Document) complete — `docs/spec/SDD-LR-FIT-COMPLETE.md`
 - [x] Business requirements locked
 - [x] Technical stack locked
 - [x] Scope defined (included/excluded)
@@ -62,7 +62,7 @@
 │
 └─ EXECUTION-WORKFLOW.md  ✅ Two-agent collaboration model
 
-Documentos/
+docs/spec/
 ├─ SDD-LR-FIT-COMPLETE.md  ✅ (already existed)
 ├─ get_or_create_pixel.py   ✅ (already existed)
 └─ [other docs...]          ✅ (already existed)

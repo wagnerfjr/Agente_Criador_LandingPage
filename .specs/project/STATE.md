@@ -104,10 +104,10 @@
 ## Context References
 
 **Full project docs:**
-- `Documentos/SDD-LR-FIT-COMPLETE.md` — Complete requirements
-- `Documentos/FEATURE-LANDING-DESIGN.md` — Component architecture
-- `Documentos/FEATURE-LANDING-TASKS.md` — Task breakdown reference
-- `Documentos/CONTENT-SCHEMA.md` — Content structure
+- `docs/spec/SDD-LR-FIT-COMPLETE.md` — Complete requirements
+- `docs/spec/FEATURE-LANDING-DESIGN.md` — Component architecture
+- `docs/spec/FEATURE-LANDING-TASKS.md` — Task breakdown reference
+- `docs/spec/CONTENT-SCHEMA.md` — Content structure
 
 **Generated (this session):**
 - `.specs/project/PROJECT.md` — Vision & goals

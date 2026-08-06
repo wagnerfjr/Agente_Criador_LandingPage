@@ -1,7 +1,8 @@
-# ROADMAP.md — LR Fit Method
+# ROADMAP.md (tracking de execução)
 
-**Horizon:** 6 months (MVP → Product)  
-**Current Phase:** EXECUTE (Week 1-2: Landing page)  
+> A visão/escopo canônico do produto está em [`docs/spec/ROADMAP.md`](../../docs/spec/ROADMAP.md).
+> Este arquivo é o estado de tracking ativo da skill tlc-spec-driven (blockers, dependências,
+> status por milestone) — reconciliado em 2026-08-06 para não conflitar com a spec original.
 
 ---
 
@@ -136,7 +137,7 @@ PROJECT SETUP (Day 1)
 └─ Offer/pricing ⏳ (pending)
 
 DESIGN SYSTEM (Day 2-3)
-├─ Colors, typography ← See Documentos/FEATURE-LANDING-DESIGN.md
+├─ Colors, typography ← See docs/spec/FEATURE-LANDING-DESIGN.md
 ├─ Components base
 └─ Tailwind config
 

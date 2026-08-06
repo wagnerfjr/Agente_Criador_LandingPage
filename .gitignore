@@ -49,8 +49,9 @@ logs/
 # MCP local (will be in ~/.claude/mcp globally)
 .claude/mcp/  # Local MCP shouldn't be committed; use global ~/.claude/mcp
 
-# Asset pipeline intermediate
+# Asset pipeline intermediate (contém fotos reais de clientes — nunca commitar)
 assets/raw/
+assets/photo-review.html
 
 # Vercel
 .vercel/

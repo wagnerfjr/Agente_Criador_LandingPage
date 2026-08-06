@@ -58,7 +58,7 @@ Execute `scripts/get_or_create_pixel.py` to create (or verify existence of) Meta
 ```
 lrfitmethod-landing/
 └─ scripts/
-   └─ get_or_create_pixel.py  ← Already in Documentos/
+   └─ get_or_create_pixel.py  ← Already in docs/spec/
 ```
 
 **Done When:**

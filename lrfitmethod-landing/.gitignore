@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
+
+# Generated output (script: scripts/generate-sitemap.js)
+public/sitemap.xml

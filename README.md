@@ -237,7 +237,7 @@ See `.specs/features/landing/tasks.md` for full task breakdown.
 | `.specs/features/landing/VALIDATION-PLAN.md` | QA checklist per task |
 | `.specs/EXECUTION-MEMORY.md` | Progress, errors, solutions |
 | `.specs/EXECUTION-WORKFLOW.md` | Dev + QA workflow |
-| `Documentos/SDD-LR-FIT-COMPLETE.md` | Complete requirements |
+| `docs/spec/SDD-LR-FIT-COMPLETE.md` | Complete requirements |
 
 ---
 
