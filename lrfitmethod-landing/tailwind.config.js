@@ -9,7 +9,8 @@ export default {
       colors: {
         gold: '#D4AF37',
         'gold-dark': '#B8860B',
-        dark: '#1a1a1a',
+        dark: '#0A0E27',
+        accent: '#FF69B4',
       },
       fontFamily: {
         heading: ['Montserrat', 'sans-serif'],

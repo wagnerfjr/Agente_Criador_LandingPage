@@ -8,12 +8,6 @@ import { setPageMeta, organizationSchema, setStructuredData } from './utils/seo'
 setPageMeta()
 setStructuredData(organizationSchema)
 
-// Register Meta Pixel
-if (import.meta.env.VITE_META_PIXEL_ID) {
-  window.fbq('init', import.meta.env.VITE_META_PIXEL_ID);
-  window.fbq('track', 'PageView');
-}
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

@@ -1,1 +1,2 @@
-export { usePerformance, useScrollPerformance } from './usePerformance';
+export { useTrainerParam } from './useTrainerParam';
+export { useMetaPixel } from './useMetaPixel';

@@ -1,13 +1,14 @@
 /**
  * SEO Utilities - Meta tags, structured data, og:tags
  */
+import content from '../content/lrfit.content.json';
 
 export const setPageMeta = (config = {}) => {
   const defaults = {
-    title: 'LR Fit Method - Transformação Fitness com Treino Inteligente',
-    description: 'Método revolucionário de fitness que combina treinamento personalizado com análise de dados. Transforme seu corpo em 90 dias.',
-    canonical: 'https://lrfitmethod.com',
-    ogImage: 'https://placeholder.com/1200x630/D4AF37/1a1a1a?text=LR+Fit+Method',
+    title: content.seo.title,
+    description: content.seo.description,
+    canonical: 'https://lrfitmethod.vercel.app',
+    ogImage: content.seo.ogImage,
     ogType: 'website',
     twitterCard: 'summary_large_image',
   };
@@ -83,27 +84,16 @@ export const setStructuredData = (data) => {
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'LR Fit Method',
-  url: 'https://lrfitmethod.com',
-  logo: 'https://lrfitmethod.com/logo.png',
-  description: 'Método revolucionário de fitness com treinamento personalizado e análise de dados',
+  name: content.brand.name,
+  url: 'https://lrfitmethod.vercel.app',
+  description: content.seo.description,
   sameAs: [
-    'https://www.instagram.com/lrfitmethod',
-    'https://www.facebook.com/lrfitmethod',
+    `https://www.instagram.com/${content.trainers.renata.instagram}`,
+    `https://www.instagram.com/${content.trainers.leandro.instagram}`,
   ],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'Customer Service',
     areaServed: 'BR',
   },
-};
-
-// Local business schema (if applicable)
-export const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'LR Fit Method',
-  image: 'https://placeholder.com/1200x630/D4AF37/1a1a1a?text=LR+Fit+Method',
-  url: 'https://lrfitmethod.com',
-  priceRange: '$$',
 };
