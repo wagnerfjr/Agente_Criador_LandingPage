@@ -131,6 +131,11 @@ textarea::placeholder {
   @apply outline-2 outline-offset-2 outline-gold;
 }
 
+/* Radial Gradient Utility */
+.bg-gradient-radial {
+  background: radial-gradient(var(--tw-gradient-stops));
+}
+
 /* Print Styles */
 @media print {
   * {
