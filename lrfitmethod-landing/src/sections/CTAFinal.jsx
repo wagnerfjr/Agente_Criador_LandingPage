@@ -1,4 +1,3 @@
-import { Card, Grid } from '@/components';
 import content from '@/content/lrfit.content.json';
 
 export default function CTAFinal({ trainer, trackLead }) {
@@ -6,46 +5,112 @@ export default function CTAFinal({ trainer, trackLead }) {
     trainer === 'leandro' ? content.trainers.leandro : content.trainers.renata;
 
   return (
-    <section id="planos" className="py-20 md:py-32 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-dark text-center mb-4 text-wrap-balance">
+    <section id="planos" className="py-20 md:py-32 bg-white relative overflow-hidden">
+      {/* Glow atrás do card Semestral */}
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
+        <div className="absolute w-96 h-96 bg-gradient-radial from-gold/10 to-transparent rounded-full blur-3xl right-0 top-1/2 -translate-y-1/2"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="font-heading font-bold text-4xl md:text-5xl text-dark text-center mb-4 text-wrap-balance">
           Planos
         </h2>
         <p className="text-center text-gray-600 mb-12">
           Valores e condições são combinados diretamente com {activeTrainer.name.split(' ')[0]} pelo WhatsApp.
         </p>
 
-        <Grid cols={2} gap="lg" className="max-w-2xl mx-auto">
+        {/* Grid assimétrico: Trimestral 40% | Semestral 60% */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 max-w-5xl mx-auto">
           {content.planos.map((plano) => {
             const waLink = `https://wa.me/${activeTrainer.phone}?text=${encodeURIComponent(plano.whatsappMensagem)}`;
+            const isDestacado = plano.destacado;
+
             return (
-              <Card
+              <div
                 key={plano.id}
-                variant={plano.destacado ? 'elevated' : 'outlined'}
-                padding="lg"
-                className={`text-center flex flex-col ${plano.destacado ? 'ring-2 ring-gold scale-105' : ''}`}
+                className={`flex flex-col ${isDestacado ? 'md:col-span-3' : 'md:col-span-2'}`}
               >
-                {plano.destacado && (
-                  <span className="mx-auto mb-3 bg-gold text-dark text-xs font-bold px-3 py-1 rounded-full">
-                    Mais Escolhido
-                  </span>
-                )}
-                <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">{plano.periodo}</p>
-                <h3 className="font-heading font-bold text-2xl text-dark mb-3">{plano.nome}</h3>
-                <p className="text-gray-600 mb-8 flex-grow">{plano.frase}</p>
-                <a
-                  href={waLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => trackLead(plano.id)}
-                  className="bg-gold text-dark font-bold py-3 px-6 rounded-lg hover:shadow-lg transition-all"
+                <div
+                  className={`flex flex-col h-full rounded-xl p-8 transition-all duration-300 ${
+                    isDestacado
+                      ? 'bg-gradient-to-br from-gold/15 via-dark to-dark border-2 border-gold shadow-2xl'
+                      : 'bg-gray-900 border border-gold/30'
+                  }`}
                 >
-                  {plano.cta}
-                </a>
-              </Card>
+                  {/* Badge */}
+                  {isDestacado && (
+                    <div className="flex justify-center mb-4">
+                      <span className="bg-gold text-dark text-xs font-bold px-4 py-1.5 rounded-full">
+                        ⭐ MAIS ESCOLHIDO
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Período */}
+                  <p className={`text-xs uppercase tracking-widest font-bold mb-2 ${
+                    isDestacado ? 'text-gold' : 'text-gray-400'
+                  }`}>
+                    {plano.periodo}
+                  </p>
+
+                  {/* Nome do plano */}
+                  <h3 className={`font-heading font-bold mb-2 ${
+                    isDestacado ? 'text-gold text-3xl' : 'text-white text-2xl'
+                  }`}>
+                    {plano.nome}
+                  </h3>
+
+                  {/* Frase motivacional */}
+                  <p className={`mb-6 ${
+                    isDestacado ? 'text-gray-300 italic' : 'text-gray-400'
+                  }`}>
+                    {plano.frase}
+                  </p>
+
+                  {/* Diferenciais */}
+                  <div className="mb-8 flex-grow">
+                    <ul className="space-y-3">
+                      {plano.diferenciais.map((diferencial, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="text-gold font-bold flex-shrink-0 mt-0.5">✓</span>
+                          <span className={`text-sm ${
+                            isDestacado ? 'text-gray-200' : 'text-gray-300'
+                          }`}>
+                            {diferencial}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Destaque especial para Semestral */}
+                    {isDestacado && plano.diferenciais[plano.diferenciais.length - 1].includes('aula') && (
+                      <div className="mt-4 p-3 bg-gold/10 border border-gold/30 rounded-lg">
+                        <p className="text-gold text-xs font-bold">
+                          🎯 O diferencial: Aulas presenciais incluídas
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* CTA Button */}
+                  <a
+                    href={waLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => trackLead(plano.id)}
+                    className={`w-full font-bold py-4 px-6 rounded-lg transition-all duration-300 text-center ${
+                      isDestacado
+                        ? 'bg-gold text-dark hover:bg-gold/90 hover:shadow-xl'
+                        : 'bg-gold/80 text-dark hover:bg-gold hover:shadow-lg'
+                    }`}
+                  >
+                    {plano.cta}
+                  </a>
+                </div>
+              </div>
             );
           })}
-        </Grid>
+        </div>
       </div>
     </section>
   );
