@@ -2,14 +2,7 @@ import { Button, LazyImage } from '@/components';
 import content from '@/content/lrfit.content.json';
 
 export default function Hero({ trainer }) {
-  const { headline, subheadline, body, ctaText } = content.hero;
-
-  const photo =
-    trainer === 'renata'
-      ? content.trainers.renata.photo
-      : trainer === 'leandro'
-        ? content.trainers.leandro.photo
-        : content.hero.photoDefault;
+  const { headline, subheadline, body, ctaText, photoDefault } = content.hero;
 
   const scrollToQuemSomos = () => {
     document.getElementById('quem-somos')?.scrollIntoView({ behavior: 'smooth' });
@@ -17,6 +10,10 @@ export default function Hero({ trainer }) {
 
   const scrollToResultados = () => {
     document.getElementById('resultados')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToPlanos = () => {
+    document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -48,7 +45,7 @@ export default function Hero({ trainer }) {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-10 justify-center md:justify-start">
-            <Button variant="primary" size="lg" onClick={scrollToQuemSomos}>
+            <Button variant="primary" size="lg" onClick={scrollToPlanos}>
               {ctaText}
             </Button>
             <Button
@@ -78,14 +75,8 @@ export default function Hero({ trainer }) {
         <div className="order-1 md:order-2 relative z-10">
           <div className="relative">
             <LazyImage
-              src={photo}
-              alt={
-                trainer === 'renata'
-                  ? content.trainers.renata.name
-                  : trainer === 'leandro'
-                    ? content.trainers.leandro.name
-                    : 'LR Fit Method'
-              }
+              src={photoDefault}
+              alt="LR Fit Method"
               className="w-full h-auto rounded-2xl shadow-2xl aspect-[4/5] object-cover object-[center_30%]"
             />
           </div>
