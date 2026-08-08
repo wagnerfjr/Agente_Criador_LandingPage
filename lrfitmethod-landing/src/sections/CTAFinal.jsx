@@ -19,8 +19,8 @@ export default function CTAFinal({ trainer, trackLead }) {
           Valores e condições são combinados diretamente com {activeTrainer.name.split(' ')[0]} pelo WhatsApp.
         </p>
 
-        {/* Grid assimétrico: Trimestral 40% | Semestral 60% */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 max-w-5xl mx-auto">
+        {/* Grid assimétrico: Trimestral 2 | Semestral 3 (destaque) | Anual 2 */}
+        <div className="grid grid-cols-1 md:grid-cols-7 gap-6 md:gap-8 max-w-6xl mx-auto">
           {content.planos.map((plano) => {
             const waLink = `https://wa.me/${activeTrainer.phone}?text=${encodeURIComponent(plano.whatsappMensagem)}`;
             const isDestacado = plano.destacado;
@@ -28,7 +28,9 @@ export default function CTAFinal({ trainer, trackLead }) {
             return (
               <div
                 key={plano.id}
-                className={`flex flex-col ${isDestacado ? 'md:col-span-3' : 'md:col-span-2'}`}
+                className={`flex flex-col ${
+                  isDestacado ? 'md:col-span-3' : 'md:col-span-2'
+                }`}
               >
                 <div
                   className={`flex flex-col h-full rounded-xl p-8 transition-all duration-300 ${
@@ -110,6 +112,24 @@ export default function CTAFinal({ trainer, trackLead }) {
               </div>
             );
           })}
+
+          {/* Banner-ponte para Dose Dupla */}
+          <div className="col-span-1 md:col-span-7">
+            <div className="bg-gradient-to-r from-gold/5 via-gold/10 to-gold/5 border border-gold/20 rounded-lg p-6 md:p-8 text-center">
+              <p className="text-gray-300 text-lg mb-4">
+                <span className="text-gold font-bold">👫 Treinando com alguém especial?</span> Conheça nosso plano exclusivo para casais e amigos.
+              </p>
+              <a
+                href="#dose-dupla"
+                onClick={() => {
+                  document.getElementById('dose-dupla')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="inline-block text-gold font-bold hover:text-white transition-colors"
+              >
+                Saiba mais sobre a Dose Dupla →
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -119,6 +119,26 @@
         "Vídeos de execução dos treinos",
         "1 aula presencial/mês (6 aulas total)"
       ]
+    },
+    {
+      "id": "anual",
+      "nome": "Domínio Total",
+      "periodo": "Plano Anual",
+      "frase": "Transformação completa — de hábito a estilo de vida.",
+      "cta": "Falar com Trainer",
+      "destacado": false,
+      "whatsappMensagem": "Olá! Vi a página de vocês e estou interessado em saber mais sobre o plano Anual.",
+      "diferenciais": [
+        "Treino personalizado",
+        "Dieta personalizada",
+        "Suporte direto via WhatsApp",
+        "Ajustes semanais",
+        "Prescrição de suplementos",
+        "Acesso ao app de treinos",
+        "Vídeos de execução dos treinos",
+        "2 aulas presenciais/mês (24 aulas total)",
+        "Prioridade no atendimento"
+      ]
     }
   ],
 

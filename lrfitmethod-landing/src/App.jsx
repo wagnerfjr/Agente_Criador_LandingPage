@@ -14,12 +14,20 @@ function App() {
             <span className="font-heading font-bold text-gold text-lg tracking-wide">
               {content.brand.name}
             </span>
-            <button
-              onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-sm font-semibold text-gold hover:text-white transition-colors"
-            >
-              Planos
-            </button>
+            <div className="flex gap-6">
+              <button
+                onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm font-semibold text-gold hover:text-white transition-colors"
+              >
+                Planos
+              </button>
+              <button
+                onClick={() => document.getElementById('dose-dupla')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm font-semibold text-gold hover:text-white transition-colors hidden sm:block"
+              >
+                Dose Dupla
+              </button>
+            </div>
           </div>
         </div>
       </nav>
