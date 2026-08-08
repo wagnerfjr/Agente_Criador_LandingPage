@@ -1,6 +1,6 @@
 # STATE.md — Project Memory
 
-**Last Updated:** 2026-08-06  
+**Last Updated:** 2026-08-08  
 **Session Owner:** Wagner + Claude Code  
 
 ---
@@ -69,42 +69,10 @@
 - [x] Landing rebuilt per `docs/spec/` (Hero, Problema, Pilares, QuemSomos, Resultados, Metodologia, CTAFinal, Footer)
 - [x] Client photos curated and processed (9 transformações + hero + 2 trainers + 2 logos)
 - [x] WhatsApp routing (`?trainer=renata|leandro`), no lead form
-- [ ] **Próxima sessão:** Hero — corrigir crop da foto + reduzir monotonia (ver "Design Backlog" acima)
-- [ ] Pedir bio curta (2-3 linhas) da Renata e do Leandro
+- [x] **2026-08-08:** Hero — implementado: eyebrow + destaque de cor + glow radial + badges + 2º botão (Design Backlog resolvido)
+- [ ] Pedir bio curta (2-3 linhas) da Renata e do Leandro (campos: trainers.renata.bio, trainers.leandro.bio)
 - [ ] Otimizar imagens (WebP/compressão)
 - [ ] Meta Ads: campanhas de teste (Task 16-17 originais — performance + QA final)
-
----
-
-## Design Backlog — Hero Section (feedback 2026-08-06)
-
-**Status:** Aprovado o diagnóstico, plano definido — execução adiada pra outra sessão (Wagner pediu pra não implementar ainda).
-
-**Contexto:** Print do Hero em produção mostrou 2 problemas:
-
-### Problema 1 — Foto cortada errado
-
-`foto_casal.jpg` é vertical (720×1280, 9:16). O CSS atual (`aspect-[4/5] md:aspect-square` + `object-cover`) força um crop quadrado no desktop, sobrando espaço vazio de academia ao redor do casal em vez de focar neles.
-
-**Alternativas (escolher ao executar):**
-1. **Recortar a foto de origem manualmente** antes de reprocessar — foco fechado no casal, sem depender de crop automático via CSS. Mais trabalho manual, melhor resultado.
-2. **Trocar a proporção do frame** de quadrado pra vertical também no desktop (`aspect-[3/4]` ou `aspect-[4/5]` sem breakpoint pra square) — respeita a orientação natural da foto.
-3. **`object-contain` num card com fundo** (gradiente/moldura dourada preenchendo o espaço sobrando) — mostra a foto inteira, sem cortar nada, mas ela fica visualmente menor.
-
-**Recomendação:** 1 + 2 combinados (resolve a causa raiz, não só mascara com CSS).
-
-### Problema 2 — Seção monótona, pouco texto, não chama atenção
-
-Hoje: headline + subheadline + 1 parágrafo curto + 1 botão, fundo navy chapado. Faltam camadas visuais.
-
-**Alternativas (escolher quantas fizerem sentido, não é all-or-nothing):**
-- Selo/eyebrow acima do título (ex: "CONSULTORIA ONLINE", caps, dourado, pequeno) — dá hierarquia antes do H1
-- Tira de credibilidade abaixo do botão — badges curtos sem número inventado (ex: "Treino + Nutrição", "Acompanhamento Personalizado", "100% Online")
-- Segundo botão (outline/ghost) ao lado do CTA principal — ex: "Ver Resultados" rolando pra `#resultados`
-- Fundo com profundidade — glow radial sutil atrás da foto ou gradiente diagonal, em vez de navy chapado
-- Destacar uma palavra do H1 em outro tom de cor pra dar tensão visual (ex: "Deseja")
-
-**Quando retomar:** ler esta seção, escolher as opções, implementar em `src/sections/Hero.jsx` + possivelmente reprocessar `public/images/hero-casal.jpg`.
 
 ---
 
