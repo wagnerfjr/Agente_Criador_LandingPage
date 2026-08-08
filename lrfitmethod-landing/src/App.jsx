@@ -1,4 +1,4 @@
-import { Hero, Problema, Pilares, QuemSomos, Resultados, Metodologia, CTAFinal, Footer } from '@/sections';
+import { Hero, Problema, Pilares, QuemSomos, Resultados, Metodologia, CTAFinal, DoseDupla, Footer } from '@/sections';
 import { useTrainerParam, useMetaPixel } from '@/hooks';
 import content from '@/content/lrfit.content.json';
 
@@ -32,6 +32,7 @@ function App() {
         <Resultados />
         <Metodologia />
         <CTAFinal trainer={trainer} trackLead={trackLead} />
+        <DoseDupla trainer={trainer} trackLead={trackLead} />
       </main>
 
       <Footer />

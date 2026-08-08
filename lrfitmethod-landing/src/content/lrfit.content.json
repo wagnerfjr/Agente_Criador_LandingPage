@@ -126,6 +126,32 @@
     "mensagem": "Olá! Vi a página de vocês e estou interessado em saber mais sobre os planos."
   },
 
+  "doseDupla": {
+    "headline": "O Mesmo Objetivo, Cada Um no Seu Ritmo",
+    "subheadline": "Vocês recebem os planos juntos, treinam cada um no seu horário e se motivam no dia a dia — sem depender de agenda compatível.",
+    "body": "A Dose Dupla é pra casais ou amigos que querem seguir a mesma consultoria: treino e dieta personalizados pra cada um, acompanhamento via WhatsApp, e a vantagem de ter alguém que entende exatamente o que você tá passando — porque também tá passando.",
+    "ctaText": "Quero saber mais sobre a Dose Dupla",
+    "photos": [
+      {
+        "id": "praia",
+        "src": "/images/dose-dupla-praia.jpg",
+        "label": "Resultado físico"
+      },
+      {
+        "id": "maratona",
+        "src": "/images/dose-dupla-maratona.jpg",
+        "label": "Conquistas compartilhadas"
+      }
+    ],
+    "bullets": [
+      "Plano de treino e dieta individual pra cada pessoa",
+      "Treinos executados no horário e local de cada um — sem depender do outro",
+      "Acompanhamento via WhatsApp para os dois",
+      "Comparem evolução e se cobrem no dia a dia",
+      "Semestral: 1 aula presencial por mês — formato (em dupla ou individual) combinado na montagem do plano de cada um"
+    ]
+  },
+
   "footer": {
     "disclaimer": "Resultados variam por pessoa. Consulte um médico antes de iniciar qualquer programa de treino ou dieta."
   },
