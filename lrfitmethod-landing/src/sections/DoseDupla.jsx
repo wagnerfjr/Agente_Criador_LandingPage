@@ -7,7 +7,7 @@ export default function DoseDupla({ trainer, trackLead }) {
 
   const { headline, subheadline, body, photos, bullets, ctaTemplate } = content.doseDupla;
 
-  const waLink = `https://wa.me/${activeTrainer.phone}?text=${encodeURIComponent(ctaText)}`;
+  const waLink = `https://wa.me/${activeTrainer.phone}?text=${encodeURIComponent(ctaTemplate)}`;
 
   return (
     <section id="dose-dupla" className="py-20 md:py-32 bg-dark">
