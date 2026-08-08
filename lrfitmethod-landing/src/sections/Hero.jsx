@@ -34,7 +34,7 @@ export default function Hero({ trainer }) {
           </span>
 
           {/* Headline com destaque */}
-          <h1 className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-light mb-4 text-wrap-balance leading-snug">
+          <h1 className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-white mb-4 text-wrap-balance leading-snug">
             O Corpo que Você{' '}
             <span className="text-gold">Deseja</span>
           </h1>
