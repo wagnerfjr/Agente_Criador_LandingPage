@@ -34,7 +34,7 @@ export default function Hero({ trainer }) {
           </span>
 
           {/* Headline com destaque */}
-          <h1 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-light mb-4 text-wrap-balance leading-tight">
+          <h1 className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-light mb-4 text-wrap-balance leading-snug">
             O Corpo que Você{' '}
             <span className="text-gold">Deseja</span>
           </h1>
@@ -87,7 +87,7 @@ export default function Hero({ trainer }) {
                     ? content.trainers.leandro.name
                     : 'LR Fit Method'
               }
-              className="w-full h-auto rounded-2xl shadow-2xl aspect-[4/5] object-cover object-top"
+              className="w-full h-auto rounded-2xl shadow-2xl aspect-[4/5] object-cover object-[center_30%]"
             />
           </div>
         </div>
