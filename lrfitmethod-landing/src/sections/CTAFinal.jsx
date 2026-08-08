@@ -115,7 +115,7 @@ export default function CTAFinal({ trainer, trackLead }) {
 
           {/* Banner-ponte para Dose Dupla */}
           <div className="col-span-1 md:col-span-7">
-            <div className="bg-gradient-to-r from-gold/5 via-gold/10 to-gold/5 border border-gold/20 rounded-lg p-6 md:p-8 text-center">
+            <div className="bg-gradient-to-r from-gold/25 via-gold/30 to-gold/25 border-2 border-gold/60 rounded-lg p-6 md:p-8 text-center">
               <p className="text-gray-300 text-lg mb-4">
                 <span className="text-gold font-bold">👫 Treinando com alguém especial?</span> Conheça nosso plano exclusivo para casais e amigos.
               </p>
