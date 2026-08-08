@@ -70,7 +70,7 @@ export default function DoseDupla({ trainer, trackLead }) {
             onClick={() => trackLead('dose-dupla')}
             className="bg-gold text-dark font-bold py-4 px-8 rounded-lg hover:bg-gold/90 hover:shadow-xl transition-all duration-300 text-center inline-block"
           >
-            {`${ctaText} com ${activeTrainer.name.split(' ')[0]}`}
+            {`${ctaTemplate} com ${activeTrainer.name.split(' ')[0]}`}
           </a>
         </div>
       </div>
