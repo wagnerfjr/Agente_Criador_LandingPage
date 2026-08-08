@@ -115,16 +115,19 @@ export default function CTAFinal({ trainer, trackLead }) {
 
           {/* Banner-ponte para Dose Dupla */}
           <div className="col-span-1 md:col-span-7">
-            <div className="bg-gradient-to-r from-gold/25 via-gold/30 to-gold/25 border-2 border-gold/60 rounded-lg p-6 md:p-8 text-center">
-              <p className="text-gray-300 text-lg mb-4">
-                <span className="text-gold font-bold">👫 Treinando com alguém especial?</span> Conheça nosso plano exclusivo para casais e amigos.
+            <div className="bg-gray-900 border-2 border-gold rounded-lg p-6 md:p-8 text-center">
+              <p className="text-white text-lg md:text-xl mb-4">
+                <span className="text-gold font-bold">👫 Treinando com alguém especial?</span>
+              </p>
+              <p className="text-gray-300 text-base md:text-lg mb-6">
+                Conheça nosso plano exclusivo para casais e amigos.
               </p>
               <a
                 href="#dose-dupla"
                 onClick={() => {
                   document.getElementById('dose-dupla')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-block text-gold font-bold hover:text-white transition-colors"
+                className="inline-block bg-gold text-dark font-bold px-6 py-3 rounded-lg hover:bg-gold/90 transition-all"
               >
                 Saiba mais sobre a Dose Dupla →
               </a>
