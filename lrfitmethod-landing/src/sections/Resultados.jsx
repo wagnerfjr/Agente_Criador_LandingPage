@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Grid, LazyImage } from '@/components';
+import { LazyImage } from '@/components';
 import content from '@/content/lrfit.content.json';
 
 export default function Resultados() {
@@ -23,27 +23,29 @@ export default function Resultados() {
           Resultados
         </h2>
 
-        <Grid cols={3} gap="md">
+        {/* Grid denso de thumbnails — 2 colunas mobile, 3 tablet, 4-5 desktop */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3">
           {transformacoes.map((t, i) => (
             <button
               key={t.id}
               type="button"
               onClick={() => setOpenIndex(i)}
-              className="block w-full aspect-[3/4] overflow-hidden rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-gold cursor-zoom-in group"
+              className="block w-full aspect-square overflow-hidden rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-gold cursor-zoom-in group"
             >
               <LazyImage
                 src={t.photo}
                 alt="Resultado de cliente LR Fit Method"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
             </button>
           ))}
-        </Grid>
+        </div>
       </div>
 
+      {/* Lightbox modal */}
       {openIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
           onClick={() => setOpenIndex(null)}
           role="dialog"
           aria-modal="true"
@@ -59,7 +61,7 @@ export default function Resultados() {
           <img
             src={transformacoes[openIndex].photo}
             alt="Resultado de cliente LR Fit Method"
-            className="max-w-full max-h-full object-contain rounded-lg"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
