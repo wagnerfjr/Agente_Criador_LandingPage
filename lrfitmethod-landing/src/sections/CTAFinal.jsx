@@ -33,7 +33,7 @@ export default function CTAFinal({ trainer, trackLead }) {
                 <div
                   className={`flex flex-col h-full rounded-xl p-8 transition-all duration-300 ${
                     isDestacado
-                      ? 'bg-gradient-to-br from-gold/15 via-dark to-dark border-2 border-gold shadow-2xl'
+                      ? 'bg-gray-900 border-2 border-gold shadow-2xl'
                       : 'bg-gray-900 border border-gold/30'
                   }`}
                 >
