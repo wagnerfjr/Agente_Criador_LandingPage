@@ -88,9 +88,32 @@ See `lrfit.content.json` for exact references.
 
 ---
 
+## Personalized CTAs
+
+All plan and section buttons use trainer-aware copy:
+
+**Example: If `?trainer=leandro`**
+- Trimestral: "Falar com Leandro"
+- Semestral: "Começar Agora com Leandro"
+- Anual: "Falar com Leandro"
+- Dose Dupla: "Quero saber mais com Leandro"
+
+**Without parameter** (default: Renata)
+- All buttons use Renata's name
+
+**Why:** Removes generic "Trainer" language, feels personal and human. Higher conversion since messaging matches the origin (Renata's Instagram → button says Renata).
+
+**Implementation:** content.json uses `ctaTemplate` field + template string in React:
+```jsx
+`${plano.ctaTemplate} ${activeTrainer.name.split(' ')[0]}`
+```
+
+---
+
 ## Notes
 
 - Photos NOT in `.gitignore`, so they're not versioned (won't bloat repo)
 - Folder structure persists across sessions
 - Always use dedicated folder for new sections
 - One folder = one section = one query to Claude
+- CTAs personalized by `?trainer=` parameter (no parameter = Renata default)

@@ -5,7 +5,7 @@ export default function DoseDupla({ trainer, trackLead }) {
   const activeTrainer =
     trainer === 'leandro' ? content.trainers.leandro : content.trainers.renata;
 
-  const { headline, subheadline, body, photos, bullets, ctaText } = content.doseDupla;
+  const { headline, subheadline, body, photos, bullets, ctaTemplate } = content.doseDupla;
 
   const waLink = `https://wa.me/${activeTrainer.phone}?text=${encodeURIComponent(ctaText)}`;
 
@@ -70,7 +70,7 @@ export default function DoseDupla({ trainer, trackLead }) {
             onClick={() => trackLead('dose-dupla')}
             className="bg-gold text-dark font-bold py-4 px-8 rounded-lg hover:bg-gold/90 hover:shadow-xl transition-all duration-300 text-center inline-block"
           >
-            {ctaText}
+            {`${ctaText} com ${activeTrainer.name.split(' ')[0]}`}
           </a>
         </div>
       </div>

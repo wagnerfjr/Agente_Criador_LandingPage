@@ -93,7 +93,7 @@
       "nome": "Consistência",
       "periodo": "Plano Trimestral",
       "frase": "Para sentir a diferença nos hábitos e no espelho.",
-      "cta": "Falar com Trainer",
+      "ctaTemplate": "Falar com",
       "destacado": false,
       "whatsappMensagem": "Olá! Vi a página de vocês e estou interessado em saber mais sobre o plano Trimestral.",
       "diferenciais": [
@@ -111,7 +111,7 @@
       "nome": "Transformação",
       "periodo": "Plano Semestral",
       "frase": "Resultado que fica — disciplina virando estilo de vida.",
-      "cta": "Começar Agora",
+      "ctaTemplate": "Começar Agora com",
       "destacado": true,
       "whatsappMensagem": "Olá! Vi a página de vocês e estou interessado em saber mais sobre o plano Semestral.",
       "diferenciais": [
@@ -130,7 +130,7 @@
       "nome": "Domínio Total",
       "periodo": "Plano Anual",
       "frase": "Transformação completa — de hábito a estilo de vida.",
-      "cta": "Falar com Trainer",
+      "ctaTemplate": "Falar com",
       "destacado": false,
       "whatsappMensagem": "Olá! Vi a página de vocês e estou interessado em saber mais sobre o plano Anual.",
       "diferenciais": [
@@ -155,17 +155,22 @@
     "headline": "O Mesmo Objetivo, Cada Um no Seu Ritmo",
     "subheadline": "Vocês recebem os planos juntos, treinam cada um no seu horário e se motivam no dia a dia — sem depender de agenda compatível.",
     "body": "A Dose Dupla é pra casais ou amigos que querem seguir a mesma consultoria: treino e dieta personalizados pra cada um, acompanhamento via WhatsApp, e a vantagem de ter alguém que entende exatamente o que você tá passando — porque também tá passando.",
-    "ctaText": "Quero saber mais sobre a Dose Dupla",
+    "ctaTemplate": "Quero saber mais sobre a Dose Dupla",
     "photos": [
       {
-        "id": "praia",
-        "src": "/images/dose-dupla-praia.jpg",
+        "id": "dose-dupla-01",
+        "src": "/images/dose-dupla-01.jpg",
         "label": "Resultado físico"
       },
       {
-        "id": "maratona",
-        "src": "/images/dose-dupla-maratona.jpg",
+        "id": "dose-dupla-02",
+        "src": "/images/dose-dupla-02.jpg",
         "label": "Conquistas compartilhadas"
+      },
+      {
+        "id": "dose-dupla-03",
+        "src": "/images/dose-dupla-03.jpg",
+        "label": "Juntos no caminho"
       }
     ],
     "bullets": [

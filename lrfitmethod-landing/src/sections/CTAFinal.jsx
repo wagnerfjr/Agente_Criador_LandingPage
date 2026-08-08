@@ -106,7 +106,7 @@ export default function CTAFinal({ trainer, trackLead }) {
                         : 'bg-gold/80 text-dark hover:bg-gold hover:shadow-lg'
                     }`}
                   >
-                    {plano.cta}
+                    {`${plano.ctaTemplate} ${activeTrainer.name.split(' ')[0]}`}
                   </a>
                 </div>
               </div>
