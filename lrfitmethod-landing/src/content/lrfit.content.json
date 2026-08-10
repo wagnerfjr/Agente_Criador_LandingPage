@@ -46,19 +46,36 @@
     "renata": {
       "name": "Renata Alves",
       "credential": "Personal Trainer",
-      "bio": "STATUS: PENDENTE",
+      "bio": "Minha história com a musculação começou aos 14 anos, quando entrei na academia buscando uma solução para o excesso de peso que carregava na adolescência.\n\nForam quase 30 anos de tentativas, erros, conquistas e muito aprendizado — um caminho que me mostrou que o treino transforma muito mais do que o corpo: transforma a mente, a autoestima e a saúde.\n\nFoi dessa paixão que nasceu a vontade de me formar em Educação Física, pra poder ajudar outras pessoas a viverem essa mesma transformação.\n\nAcredito nisso até hoje: a musculação transforma o corpo, fortalece a mente e nos dá liberdade pra viver melhor.",
+      "credenciais": [
+        "Bacharel em Educação Física",
+        "Fisiologia do Exercício",
+        "Treinamento para Melhor Idade",
+        "Traumatologia / Treinamento pós-trauma",
+        "Psicologia Esportiva e Autocuidado"
+      ],
+      "conquista": null,
       "phone": "5511957501183",
       "instagram": "personalrenata",
       "photo": "/images/trainer-renata.jpg",
+      "fotoHistoria": "/images/renata-transformacao.jpg",
       "logo": "/images/logo-renata.jpg"
     },
     "leandro": {
       "name": "Leandro Andreysuk",
       "credential": "Personal Trainer",
-      "bio": "STATUS: PENDENTE",
+      "bio": "Nascido em Osasco (SP), em 1987, comecei no futebol aos 6 anos — foram 14 anos vividos dentro de clubes, campeonatos federados e competições oficiais, período que me ensinou disciplina, competitividade e comprometimento antes mesmo de eu saber o que isso significava.\n\nQuando essa fase terminou, a musculação entrou na minha vida e virou profissão: mais de 20 anos entre treino, estudo e vivência prática dentro do universo fitness.\n\nEsse caminho me levou ao fisiculturismo — anos de preparação, competições nacionais e internacionais, e a conquista de 7 títulos de primeiro lugar e 4 títulos Overall.\n\nMas com o tempo entendi que a verdadeira transformação vai muito além de troféus e estética: ela está em construir o corpo que você deseja, sem precisar abrir mão da vida que você gosta de viver.",
+      "credenciais": [
+        "Bacharel em Educação Física",
+        "Nutrição no Esporte",
+        "Nutrição no Fisiculturismo",
+        "Treinamento de Força Feminino"
+      ],
+      "conquista": "7x Campeão · 4x Overall",
       "phone": "5511988980065",
       "instagram": "andreysukle",
       "photo": "/images/trainer-leandro.jpg",
+      "fotosHistoria": ["/images/leandro-campeonato-01.jpg", "/images/leandro-campeonato-02.jpg"],
       "logo": "/images/logo-leandro.jpg"
     }
   },
