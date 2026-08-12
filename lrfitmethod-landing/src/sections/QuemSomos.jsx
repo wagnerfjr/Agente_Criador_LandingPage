@@ -6,7 +6,6 @@ function TrainerProfile({ id, trainer, highlighted, dimmed, onCtaClick }) {
     `Olá! Vi a página de vocês e estou interessado em saber mais sobre os planos com ${trainer.name.split(' ')[0]}.`
   )}`;
 
-  const historyPhotos = trainer.fotosHistoria || (trainer.fotoHistoria ? [trainer.fotoHistoria] : []);
   const bioParagraphs = trainer.bio.split('\n\n');
 
   return (
@@ -15,17 +14,12 @@ function TrainerProfile({ id, trainer, highlighted, dimmed, onCtaClick }) {
         highlighted ? 'ring-2 ring-gold' : ''
       } ${dimmed ? 'opacity-60' : ''}`}
     >
-      {/* Fotos da história/conquista */}
-      <div className={`grid gap-1 ${historyPhotos.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
-        {historyPhotos.map((photo, idx) => (
-          <LazyImage
-            key={idx}
-            src={photo}
-            alt={`${trainer.name} — história`}
-            className="w-full aspect-[4/5] object-cover"
-          />
-        ))}
-      </div>
+      {/* Foto de perfil */}
+      <LazyImage
+        src={trainer.fotoGrande}
+        alt={`${trainer.name}`}
+        className="w-full aspect-[4/5] object-cover"
+      />
 
       <div className="p-6 md:p-8 flex flex-col flex-grow">
         {/* Nome + logo + credencial */}
