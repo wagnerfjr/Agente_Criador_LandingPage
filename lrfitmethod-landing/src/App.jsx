@@ -1,9 +1,8 @@
 import { Hero, Problema, Pilares, QuemSomos, Resultados, Metodologia, CTAFinal, DoseDupla, Footer } from '@/sections';
-import { useTrainerParam, useMetaPixel } from '@/hooks';
+import { useMetaPixel } from '@/hooks';
 import content from '@/content/lrfit.content.json';
 
 function App() {
-  const trainer = useTrainerParam();
   const { trackLead } = useMetaPixel();
 
   return (
@@ -33,14 +32,14 @@ function App() {
       </nav>
 
       <main className="pt-16">
-        <Hero trainer={trainer} />
+        <Hero />
         <Problema />
         <Pilares />
-        <QuemSomos trainer={trainer} trackLead={trackLead} />
+        <QuemSomos trackLead={trackLead} />
         <Resultados />
         <Metodologia />
-        <CTAFinal trainer={trainer} trackLead={trackLead} />
-        <DoseDupla trainer={trainer} trackLead={trackLead} />
+        <CTAFinal trackLead={trackLead} />
+        <DoseDupla trackLead={trackLead} />
       </main>
 
       <Footer />

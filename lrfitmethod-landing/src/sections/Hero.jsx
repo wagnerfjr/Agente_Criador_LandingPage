@@ -1,7 +1,7 @@
 import { Button, LazyImage } from '@/components';
 import content from '@/content/lrfit.content.json';
 
-export default function Hero({ trainer }) {
+export default function Hero() {
   const { headline, subheadline, body, ctaText, photoDefault } = content.hero;
 
   const scrollToQuemSomos = () => {

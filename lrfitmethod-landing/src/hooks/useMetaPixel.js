@@ -13,11 +13,11 @@ export function useMetaPixel() {
     }
   }, []);
 
-  const trackLead = (trainer) => {
+  const trackLead = (origem) => {
     if (!window.fbq) return;
     window.fbq('track', 'Lead', {
       content_name: 'LR Fit Method CTA',
-      trainer: trainer || 'geral',
+      origem: origem || 'geral',
       timestamp: new Date().toISOString(),
     });
   };

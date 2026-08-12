@@ -1,8 +1,7 @@
 import content from '@/content/lrfit.content.json';
 
-export default function CTAFinal({ trainer, trackLead }) {
-  const activeTrainer =
-    trainer === 'leandro' ? content.trainers.leandro : content.trainers.renata;
+export default function CTAFinal({ trackLead }) {
+  const { whatsapp, nomeExibicao } = content.contato;
 
   return (
     <section id="planos" className="py-20 md:py-32 bg-white relative overflow-hidden">
@@ -16,13 +15,13 @@ export default function CTAFinal({ trainer, trackLead }) {
           Planos
         </h2>
         <p className="text-center text-gray-600 mb-12">
-          Valores e condições são combinados diretamente com {activeTrainer.name.split(' ')[0]} pelo WhatsApp.
+          Valores e condições são combinados diretamente com a {nomeExibicao} pelo WhatsApp.
         </p>
 
         {/* Grid assimétrico: Trimestral 2 | Semestral 3 (destaque) | Anual 2 */}
         <div className="grid grid-cols-1 md:grid-cols-7 gap-6 md:gap-8 max-w-6xl mx-auto">
           {content.planos.map((plano) => {
-            const waLink = `https://wa.me/${activeTrainer.phone}?text=${encodeURIComponent(plano.whatsappMensagem)}`;
+            const waLink = `https://wa.me/${whatsapp}?text=${encodeURIComponent(plano.whatsappMensagem)}`;
             const isDestacado = plano.destacado;
 
             return (
@@ -97,7 +96,7 @@ export default function CTAFinal({ trainer, trackLead }) {
                         : 'bg-gold/80 text-dark hover:bg-gold hover:shadow-lg'
                     }`}
                   >
-                    {`${plano.ctaTemplate} ${activeTrainer.name.split(' ')[0]}`}
+                    {plano.ctaTemplate}
                   </a>
                 </div>
               </div>

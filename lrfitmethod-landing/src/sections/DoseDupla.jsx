@@ -1,13 +1,12 @@
 import { LazyImage } from '@/components';
 import content from '@/content/lrfit.content.json';
 
-export default function DoseDupla({ trainer, trackLead }) {
-  const activeTrainer =
-    trainer === 'leandro' ? content.trainers.leandro : content.trainers.renata;
+export default function DoseDupla({ trackLead }) {
+  const { whatsapp } = content.contato;
 
   const { headline, subheadline, body, photos, bullets, ctaTemplate } = content.doseDupla;
 
-  const waLink = `https://wa.me/${activeTrainer.phone}?text=${encodeURIComponent(ctaTemplate)}`;
+  const waLink = `https://wa.me/${whatsapp}?text=${encodeURIComponent(ctaTemplate)}`;
 
   return (
     <section id="dose-dupla" className="py-20 md:py-32 bg-dark">
@@ -70,7 +69,7 @@ export default function DoseDupla({ trainer, trackLead }) {
             onClick={() => trackLead('dose-dupla')}
             className="bg-gold text-dark font-bold py-4 px-8 rounded-lg hover:bg-gold/90 hover:shadow-xl transition-all duration-300 text-center inline-block"
           >
-            {`${ctaTemplate} com ${activeTrainer.name.split(' ')[0]}`}
+            {ctaTemplate}
           </a>
         </div>
       </div>
