@@ -83,15 +83,6 @@ export default function CTAFinal({ trainer, trackLead }) {
                         </li>
                       ))}
                     </ul>
-
-                    {/* Destaque especial para Semestral */}
-                    {isDestacado && plano.diferenciais[plano.diferenciais.length - 1].includes('aula') && (
-                      <div className="mt-4 p-3 bg-gold/10 border border-gold/30 rounded-lg">
-                        <p className="text-gold text-xs font-bold">
-                          🎯 O diferencial: Aulas presenciais incluídas
-                        </p>
-                      </div>
-                    )}
                   </div>
 
                   {/* CTA Button */}
