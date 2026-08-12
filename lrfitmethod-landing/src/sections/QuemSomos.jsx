@@ -1,7 +1,7 @@
 import { LazyImage } from '@/components';
 import content from '@/content/lrfit.content.json';
 
-function TrainerProfile({ id, trainer, highlighted, dimmed, onCtaClick }) {
+function TrainerProfile({ id, trainer, onCtaClick }) {
   const waLink = `https://wa.me/${trainer.phone}?text=${encodeURIComponent(
     `Olá! Vi a página de vocês e estou interessado em saber mais sobre os planos com ${trainer.name.split(' ')[0]}.`
   )}`;
@@ -9,11 +9,7 @@ function TrainerProfile({ id, trainer, highlighted, dimmed, onCtaClick }) {
   const bioParagraphs = trainer.bio.split('\n\n');
 
   return (
-    <div
-      className={`flex flex-col rounded-xl overflow-hidden bg-gray-900 transition-all duration-300 ${
-        highlighted ? 'ring-2 ring-gold' : ''
-      } ${dimmed ? 'opacity-60' : ''}`}
-    >
+    <div className="flex flex-col rounded-xl overflow-hidden bg-gray-900">
       {/* Foto de perfil */}
       <LazyImage
         src={trainer.fotoGrande}
@@ -86,7 +82,7 @@ function TrainerProfile({ id, trainer, highlighted, dimmed, onCtaClick }) {
   );
 }
 
-export default function QuemSomos({ trainer, trackLead }) {
+export default function QuemSomos({ trackLead }) {
   return (
     <section id="quem-somos" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,15 +101,11 @@ export default function QuemSomos({ trainer, trackLead }) {
           <TrainerProfile
             id="renata"
             trainer={content.trainers.renata}
-            highlighted={trainer === 'renata'}
-            dimmed={trainer === 'leandro'}
             onCtaClick={trackLead}
           />
           <TrainerProfile
             id="leandro"
             trainer={content.trainers.leandro}
-            highlighted={trainer === 'leandro'}
-            dimmed={trainer === 'renata'}
             onCtaClick={trackLead}
           />
         </div>

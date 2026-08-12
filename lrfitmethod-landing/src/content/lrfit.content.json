@@ -14,7 +14,10 @@
       "secondary": "Inter"
     }
   },
-
+  "contato": {
+    "whatsapp": "5511988980065",
+    "nomeExibicao": "LR Fit Method"
+  },
   "hero": {
     "headline": "O Corpo que Você Deseja",
     "subheadline": "A Vida que Você Merece",
@@ -23,25 +26,33 @@
     "ctaAction": "scroll:quem-somos",
     "photoDefault": "/images/casal-leandro-renata.jpg"
   },
-
   "problema": {
     "headline": "Você tá cansado de plano genérico?",
     "body": "Treine com disciplina durante a semana, siga seu planejamento inteligente e aproveite os melhores momentos da vida no final de semana, sem culpa.",
     "ctaText": "Entender a Metodologia",
     "ctaAction": "scroll:metodologia"
   },
-
   "pilares": [
-    { "icon": "💪", "title": "Treine com Foco", "description": "Planejamento inteligente baseado em seus objetivos e rotina." },
-    { "icon": "🍽️", "title": "Alimente-se com Inteligência", "description": "Nutrição estratégica que funciona com seu estilo de vida." },
-    { "icon": "🎉", "title": "Viva com Liberdade", "description": "Aproveite os momentos da vida sem culpa ou restrições extremas." }
+    {
+      "icon": "💪",
+      "title": "Treine com Foco",
+      "description": "Planejamento inteligente baseado em seus objetivos e rotina."
+    },
+    {
+      "icon": "🍽️",
+      "title": "Alimente-se com Inteligência",
+      "description": "Nutrição estratégica que funciona com seu estilo de vida."
+    },
+    {
+      "icon": "🎉",
+      "title": "Viva com Liberdade",
+      "description": "Aproveite os momentos da vida sem culpa ou restrições extremas."
+    }
   ],
-
   "quemSomos": {
     "missao": "Nossa missão é transformar vidas através do movimento. Mais do que prescrever treinos, inspiramos um estilo de vida. Vivemos aquilo que ensinamos, porque acreditamos que a atividade física transforma a saúde física, mental e funcional. Com amor, dedicação e propósito, guiamos cada aluno na construção de uma vida mais forte, saudável e equilibrada, sem abrir mão da liberdade de viver, aproveitar cada momento e fazer o que ama. Porque acreditamos que o verdadeiro sucesso não está apenas em alcançar resultados, mas em conquistar uma vida plena, feliz e sustentável.",
     "parceria": "A união da nossa experiência vai além da parceria. Ela fortalece nosso propósito de oferecer um atendimento personalizado, baseado em conhecimento, dedicação e resultados reais. Juntos, entregamos uma experiência ainda mais completa para transformar vidas através da atividade física."
   },
-
   "trainers": {
     "renata": {
       "name": "Renata Alves",
@@ -79,42 +90,113 @@
       "logo": "/images/logo-leandro.jpg"
     }
   },
-
   "transformacoes": [
-    { "id": "transformacao-01", "photo": "/images/transformacao-01.jpg" },
-    { "id": "transformacao-02", "photo": "/images/transformacao-02.jpg" },
-    { "id": "transformacao-03", "photo": "/images/transformacao-03.jpg" },
-    { "id": "transformacao-04", "photo": "/images/transformacao-04.jpg" },
-    { "id": "transformacao-05", "photo": "/images/transformacao-05.jpg" },
-    { "id": "transformacao-06", "photo": "/images/transformacao-06.jpg" },
-    { "id": "transformacao-07", "photo": "/images/transformacao-07.jpg" },
-    { "id": "transformacao-08", "photo": "/images/transformacao-08.jpg" },
-    { "id": "transformacao-09", "photo": "/images/transformacao-09.jpg" },
-    { "id": "transformacao-10", "photo": "/images/transformacao-10.jpg" },
-    { "id": "transformacao-11", "photo": "/images/transformacao-11.jpg" },
-    { "id": "transformacao-12", "photo": "/images/transformacao-12.jpg" },
-    { "id": "transformacao-13", "photo": "/images/transformacao-13.jpg" },
-    { "id": "transformacao-14", "photo": "/images/transformacao-14.jpg" },
-    { "id": "transformacao-15", "photo": "/images/transformacao-15.jpg" },
-    { "id": "transformacao-16", "photo": "/images/transformacao-16.jpg" },
-    { "id": "transformacao-17", "photo": "/images/transformacao-17.jpg" },
-    { "id": "transformacao-18", "photo": "/images/transformacao-18.jpg" }
+    {
+      "id": "transformacao-01",
+      "photo": "/images/transformacao-01.jpg"
+    },
+    {
+      "id": "transformacao-02",
+      "photo": "/images/transformacao-02.jpg"
+    },
+    {
+      "id": "transformacao-03",
+      "photo": "/images/transformacao-03.jpg"
+    },
+    {
+      "id": "transformacao-04",
+      "photo": "/images/transformacao-04.jpg"
+    },
+    {
+      "id": "transformacao-05",
+      "photo": "/images/transformacao-05.jpg"
+    },
+    {
+      "id": "transformacao-06",
+      "photo": "/images/transformacao-06.jpg"
+    },
+    {
+      "id": "transformacao-07",
+      "photo": "/images/transformacao-07.jpg"
+    },
+    {
+      "id": "transformacao-08",
+      "photo": "/images/transformacao-08.jpg"
+    },
+    {
+      "id": "transformacao-09",
+      "photo": "/images/transformacao-09.jpg"
+    },
+    {
+      "id": "transformacao-10",
+      "photo": "/images/transformacao-10.jpg"
+    },
+    {
+      "id": "transformacao-11",
+      "photo": "/images/transformacao-11.jpg"
+    },
+    {
+      "id": "transformacao-12",
+      "photo": "/images/transformacao-12.jpg"
+    },
+    {
+      "id": "transformacao-13",
+      "photo": "/images/transformacao-13.jpg"
+    },
+    {
+      "id": "transformacao-14",
+      "photo": "/images/transformacao-14.jpg"
+    },
+    {
+      "id": "transformacao-15",
+      "photo": "/images/transformacao-15.jpg"
+    },
+    {
+      "id": "transformacao-16",
+      "photo": "/images/transformacao-16.jpg"
+    },
+    {
+      "id": "transformacao-17",
+      "photo": "/images/transformacao-17.jpg"
+    },
+    {
+      "id": "transformacao-18",
+      "photo": "/images/transformacao-18.jpg"
+    }
   ],
-
   "metodologia": [
-    { "number": "1", "icon": "📋", "title": "Plano Personalizado", "description": "Análise completa e plano 100% customizado para você." },
-    { "number": "2", "icon": "📊", "title": "Acompanhamento Semanal", "description": "Suporte semanal com check-ins e ajustes sempre que necessário." },
-    { "number": "3", "icon": "⚙️", "title": "Ajustes Individualizados", "description": "Seu plano evolui junto com você, no seu ritmo e sem riscos." },
-    { "number": "4", "icon": "✅", "title": "Resultados Reais", "description": "Transformação durável baseada em consistência." }
+    {
+      "number": "1",
+      "icon": "📋",
+      "title": "Plano Personalizado",
+      "description": "Análise completa e plano 100% customizado para você."
+    },
+    {
+      "number": "2",
+      "icon": "📊",
+      "title": "Acompanhamento Semanal",
+      "description": "Suporte semanal com check-ins e ajustes sempre que necessário."
+    },
+    {
+      "number": "3",
+      "icon": "⚙️",
+      "title": "Ajustes Individualizados",
+      "description": "Seu plano evolui junto com você, no seu ritmo e sem riscos."
+    },
+    {
+      "number": "4",
+      "icon": "✅",
+      "title": "Resultados Reais",
+      "description": "Transformação durável baseada em consistência."
+    }
   ],
-
   "planos": [
     {
       "id": "trimestral",
       "nome": "Consistência",
       "periodo": "Plano Trimestral",
       "frase": "Para sentir a diferença nos hábitos e no espelho.",
-      "ctaTemplate": "Falar com",
+      "ctaTemplate": "Falar com a LR Fit Method",
       "destacado": false,
       "whatsappMensagem": "Olá! Vi a página de vocês e estou interessado em saber mais sobre o plano Trimestral.",
       "diferenciais": [
@@ -132,7 +214,7 @@
       "nome": "Transformação",
       "periodo": "Plano Semestral",
       "frase": "Resultado que fica — disciplina virando estilo de vida.",
-      "ctaTemplate": "Começar Agora com",
+      "ctaTemplate": "Começar Agora com a LR Fit Method",
       "destacado": true,
       "whatsappMensagem": "Olá! Vi a página de vocês e estou interessado em saber mais sobre o plano Semestral.",
       "diferenciais": [
@@ -150,7 +232,7 @@
       "nome": "Domínio Total",
       "periodo": "Plano Anual",
       "frase": "Transformação completa — de hábito a estilo de vida.",
-      "ctaTemplate": "Falar com",
+      "ctaTemplate": "Falar com a LR Fit Method",
       "destacado": false,
       "whatsappMensagem": "Olá! Vi a página de vocês e estou interessado em saber mais sobre o plano Anual.",
       "diferenciais": [
@@ -165,11 +247,9 @@
       ]
     }
   ],
-
   "ctaGenerica": {
     "mensagem": "Olá! Vi a página de vocês e estou interessado em saber mais sobre os planos."
   },
-
   "doseDupla": {
     "headline": "O Mesmo Objetivo, Cada Um no Seu Ritmo",
     "subheadline": "Vocês recebem os planos juntos, treinam cada um no seu horário e se motivam no dia a dia — sem depender de agenda compatível.",
@@ -199,11 +279,9 @@
       "Comparem evolução e se cobrem no dia a dia"
     ]
   },
-
   "footer": {
     "disclaimer": "Resultados variam por pessoa. Consulte um médico antes de iniciar qualquer programa de treino ou dieta."
   },
-
   "seo": {
     "title": "LR Fit Method | Consultoria Online de Treino e Dieta",
     "description": "Transforme seu corpo com consistência. Plano personalizado, acompanhamento semanal e liberdade de viver.",
